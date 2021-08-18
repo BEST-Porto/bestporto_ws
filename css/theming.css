@@ -1,0 +1,51 @@
+@media screen and (max-width: 1050px) {
+  #mobile-hamburger {
+    visibility: visible;
+  }
+
+  #desktop-items {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  #mobile-hamburger {
+    visibility: hidden;
+    display: none;
+  }
+
+  #navbar-mobile-canvas{
+    visibility: hidden;
+    display: none
+  }
+
+  #desktop-items {
+    visibility: visible;
+  }
+}
+
+h1{
+    font-family: "Spartan";
+    color:white;
+}
+
+h2{
+    font-family: "Spartan", sans-serif;
+}
+
+p, li{
+  font-family: 'Open Sans', sans-serif;
+}
+
+div.uk-section-primary{
+  background-color: #1973BE;
+}
+
+div.uk-section-secondary#education{
+  background-color: #699641;
+}
+
+div.uk-section-secondary#competitions{
+  background-color: #B46E28;
+}
