@@ -49,3 +49,17 @@ div.uk-section-secondary#education{
 div.uk-section-secondary#competitions{
   background-color: #B46E28;
 }
+
+.button1 {
+  font-size: large;
+  color:rgb(0, 0, 0);
+  background-color: #BED746;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.experience {
+
+  padding: 5rem;
+}
