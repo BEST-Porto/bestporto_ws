@@ -1,15 +1,47 @@
+/* Font */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('fonts/leaguespartan-bold.eot');
+    src: url('fonts/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/leaguespartan-bold.woff2') format('woff2'),
+         url('fonts/leaguespartan-bold.woff') format('woff'),
+         url('fonts/leaguespartan-bold.ttf') format('truetype'),
+         url('fonts/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 /* Website Variables */
 :root {
+    /* Colors */
     --light-blue: #43678f;
-    --dark-blue: #124172;
+    --dark-blue: #144173;
 
-    --light-grey: #c5c7ca;
+    --light-grey: #f1f1f1;
+    --grey: #a6a6a6;
+
+
+    /* Fonts */
+    --font-title: 'League Spartan', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
 }
+
+
+
+/* General Styles */
+
+body {
+    font-family: var(--font-body);
+    width: 100%;
+    margin: 0;
+}
+
 
 
 /* Styles for the sections */
 
-header, section, footer {
+header, main, footer {
     width: 100%;
 }
 
@@ -20,8 +52,44 @@ header {
 section {
     background-color: var(--dark-blue);
     color: white;
+    padding: 30px 50px;
 }
 section#who-we-are, #teams {
     background-color: white;
     color: var(--dark-blue);
+}
+section#who-we-are {
+    color: black;
+}
+
+
+/* Header Styles */
+
+nav {
+    background-color: white;
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+}
+
+
+/* Footer Styles */
+
+.page-end {
+    background-color: var(--light-grey);
+    text-align: center;
+    color: black;
+}
+.page-end p {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+
+
+/* Title Styles */
+h1, h2, h3 {
+    font-family: var(--font-title);
 }
