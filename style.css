@@ -1,0 +1,27 @@
+/* Website Variables */
+:root {
+    --light-blue: #43678f;
+    --dark-blue: #124172;
+
+    --light-grey: #c5c7ca;
+}
+
+
+/* Styles for the sections */
+
+header, section, footer {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    background-color: var(--dark-blue);
+    color: white;
+}
+section#who-we-are, #teams {
+    background-color: white;
+    color: var(--dark-blue);
+}
