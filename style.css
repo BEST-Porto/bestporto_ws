@@ -34,7 +34,7 @@
 
 
 
-/* General Styles */
+/* Full document Styles */
 
 html {
     scroll-behavior: smooth;
@@ -48,10 +48,17 @@ body {
 
 
 
-/* Styles for the sections */
+/* General Styles for the sections */
 
 header, main, footer {
     width: 100%;
+}
+
+/* Em ecrãs grandes, limitar a width máxima do site, para evitar linhas muito longas */
+@media not screen and (max-width: 1200px) {
+    section {
+        padding: 30px calc((100vw - 1020px) / 2) !important;
+    }
 }
 
 header {
@@ -59,7 +66,7 @@ header {
 }
 
 section {
-    padding: 30px 50px;
+    padding: 30px 90px;
     background-color: var(--dark-blue);
     color: white;
 }
@@ -72,7 +79,18 @@ section#who-we-are {
 }
 
 
-/* Header Styles */
+
+/* Title Styles */
+h1, h2, h3 {
+    font-family: var(--font-title);
+}
+h1 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+}
+
+
+/* Navbar */
 
 nav {
     display: flex;
@@ -139,10 +157,34 @@ nav ul li:last-child a {
     color: black;
 }
 
+
+/* Código temporário da navbar para dispositivos móveis */
 @media screen and (max-width: 700px) {
     nav ul li:nth-child(-n + 4) {
         display: none;
     }
+}
+
+
+/* 'Who we are' section  */
+
+#who-we-are img.info {
+    position: relative;
+    top: 5px;
+    left: -10px;
+    width: auto;
+    height: 1em;
+}
+
+#who-we-are h1::after {
+    display: block;
+    position: relative;
+    left: 50px;
+    width: 150px;
+    height: 5px;
+    content: '';
+    background: black;
+    border-radius: 5px;
 }
 
 
@@ -157,11 +199,4 @@ nav ul li:last-child a {
 .page-end p {
     font-weight: bold;
     font-size: 2em;
-}
-
-
-
-/* Title Styles */
-h1, h2, h3 {
-    font-family: var(--font-title);
 }
