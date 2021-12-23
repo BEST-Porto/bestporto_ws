@@ -17,6 +17,7 @@
     /* Colors */
     --light-blue: #43678f;
     --dark-blue: #144173;
+    --dark-blue-trans: #144173d0;
 
     --light-grey: #f1f1f1;
     --grey: #a6a6a6;
@@ -30,6 +31,10 @@
     /* Navbar */
     --navbar-height: 50px;
     --navbar-logo-width: 30%;
+
+
+    /* Width of decorative lines*/
+    --width-lines: 5px;
 }
 
 
@@ -54,13 +59,6 @@ header, main, footer {
     width: 100%;
 }
 
-/* Em ecrãs grandes, limitar a width máxima do site, para evitar linhas muito longas */
-@media not screen and (max-width: 1200px) {
-    section {
-        padding: 30px calc((100vw - 1020px) / 2) !important;
-    }
-}
-
 header {
     text-align: center;
 }
@@ -78,6 +76,12 @@ section#who-we-are {
     color: black;
 }
 
+/* Limit maximum text width to prevent long lines */
+@media not screen and (max-width: 1200px) {
+    section {
+        padding: 30px calc((100vw - 1020px) / 2);
+    }
+}
 
 
 /* Title Styles */
@@ -166,6 +170,7 @@ nav ul li:last-child a {
 }
 
 
+
 /* 'Who we are' section  */
 
 #who-we-are img.info {
@@ -179,14 +184,50 @@ nav ul li:last-child a {
 #who-we-are h1::after {
     display: block;
     position: relative;
+    top: -1px;
     left: 50px;
     width: 150px;
     height: 5px;
     content: '';
     background: black;
-    border-radius: 5px;
+    border-radius: var(--width-lines);
 }
 
+
+/* 'BEST Porto' section */
+
+#best-porto {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(temp-img.jpg);
+    overflow: hidden;
+}
+#best-porto .empty {
+    position: relative;
+    left: -90px;
+    width: 55%;
+    min-height: 50vh;
+    margin: 0px;
+    background-color: transparent;
+    box-shadow: 0 0 0 10000px var(--dark-blue-trans);
+}
+#best-porto .content {
+    width: 55%;
+    z-index: 1;
+}
+
+#best-porto h1::after {
+    display: block;
+    position: relative;
+    top: -1px;
+    left: 8px;
+    width: 135px;
+    height: 5px;
+    content: '';
+    background: white;
+    border-radius: var(--width-lines);
+}
 
 
 /* Footer Styles */
