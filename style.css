@@ -284,13 +284,28 @@ nav ul li:last-child a {
 
 #meet-our-members h2 {
     font-weight: normal;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
     margin-top: 50px;
 }
 
-#meet-our-members > div {
+#meet-our-members div.member-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
 }
+#meet-our-members div.member-images:last-child {
+    width: 72%;
+}
+#meet-our-members div.member-images > div {
+    width: 160px;
+    min-width: 160px;
+    height: 190px;
+    margin: 5px auto;
+    border: var(--dark-blue) 4px solid;
+}
+
 
 
 
