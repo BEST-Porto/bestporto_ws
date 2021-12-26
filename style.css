@@ -57,6 +57,7 @@ body {
     font-family: var(--font-body);
     width: 100%;
     margin: 0;
+    text-align: justify;
 }
 
 
@@ -286,7 +287,7 @@ nav ul.dropdown-links li {
     top: -1px;
     left: 50px;
     width: 150px;
-    height: 5px;
+    height: var(--width-lines);
     content: '';
     background: black;
     border-radius: var(--width-lines);
@@ -298,7 +299,8 @@ nav ul.dropdown-links li {
     display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-image: url(temp-img.jpg);
+    background-image: url(img/BEST-porto-members.jpeg);
+    background-size: cover;
     overflow: hidden;
 }
 #best-porto .empty {
@@ -321,7 +323,7 @@ nav ul.dropdown-links li {
     top: -1px;
     left: 8px;
     width: 135px;
-    height: 5px;
+    height: var(--width-lines);
     content: '';
     background: white;
     border-radius: var(--width-lines);
@@ -338,7 +340,7 @@ nav ul.dropdown-links li {
     top: -1px;
     left: calc(50% - 173px);
     width: 180px;
-    height: 5px;
+    height: var(--width-lines);
     content: '';
     background: white;
     border-radius: var(--width-lines);
@@ -401,7 +403,7 @@ nav ul.dropdown-links li {
     top: -1px;
     left: calc(50%);
     width: calc(50% + var(--section-side-pad));
-    height: 5px;
+    height: var(--width-lines);
     content: '';
     background: white;
     border-radius: var(--width-lines);
@@ -417,21 +419,79 @@ nav ul.dropdown-links li {
 
 #competitions > div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 50px 0px;
 }
 #competitions div.content {
-    width: 55%;
-    margin: 20px;
+    flex: 1 1 61%;
 }
-#competitions div.image {
-    width: 45%;
+#competitions div.image-right {
+    flex: 1.2 1 39%; 
 }
-#competitions div.image img {
-    width: 100%;
-    height: auto;
+#competitions div.image-left {
+    flex: 1.2 1 39%; 
 }
 
+#competitions div img {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 200px;
+    height: auto;
+}
+#competitions div.image-right img {
+    right: -30px;
+    box-shadow: -10px 8px 0px 0px black;
+}
+#competitions div.image-left img {
+    left: -30px;
+    box-shadow: 10px 8px 0px 0px black;
+}
+
+#competitions div.first-part ul {
+    font-weight: bold;
+    margin: 30px 0px;
+    padding: 0px;
+    list-style: none;
+}
+#competitions div.first-part ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0px 5px;
+}
+#competitions div.first-part ul li:nth-child(2n) {
+    top: 30px;
+}
+@media screen and (max-width: 700px) {
+    #competitions div.first-part ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #competitions div.first-part ul li {
+        display: inline-block;
+        position: initial;
+        flex: 1 1 120px;
+        margin: 10px 5px;
+    }
+}
+
+/*
+This sections' black line, it has some problems
+
+#competitions div.first-part::after {
+    display: block;
+    position: relative;
+    top: -10px;
+    left: calc(-50vw - var(--section-side-pad));
+    width: calc(50vw + var(--section-side-pad));
+    height: var(--width-lines);
+    content: '';
+    background: black;
+    border-radius: var(--width-lines);
+}
+*/
 
 
 /* Footer Styles */
