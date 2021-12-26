@@ -478,20 +478,32 @@ nav ul.dropdown-links li {
 }
 
 /*
-This sections' black line, it has some problems
+First part decorative line, I can't make it WORK :(
 
-#competitions div.first-part::after {
+#competitions div.first-part::before {
     display: block;
     position: relative;
-    top: -10px;
-    left: calc(-50vw - var(--section-side-pad));
-    width: calc(50vw + var(--section-side-pad));
+    top: 242px;
+    left: calc(-50% - var(--section-side-pad));
+    width: calc(30% + var(--section-side-pad));
     height: var(--width-lines);
     content: '';
     background: black;
     border-radius: var(--width-lines);
 }
 */
+
+#competitions::after {
+    display: block;
+    position: relative;
+    top: -50px;
+    right: calc(-95%);
+    width: calc(5% + var(--section-side-pad));
+    height: var(--width-lines);
+    content: '';
+    background: white;
+    border-radius: var(--width-lines);
+}
 
 
 /* Footer Styles */
