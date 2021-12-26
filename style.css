@@ -28,9 +28,18 @@
     --font-body: 'Open Sans', sans-serif;
 
 
+    /* Screen Sizes considered small and large -> To be confirmed */
+    --small-screen: 700px;
+    --large-screen: 1200px;
+
+
     /* Navbar */
     --navbar-height: 50px;
     --navbar-logo-width: 30%;
+
+    
+    /* Section side padding */
+    --section-side-pad: 90px;
 
 
     /* Width of decorative lines*/
@@ -40,7 +49,6 @@
 
 
 /* Full document Styles */
-
 html {
     scroll-behavior: smooth;
 }
@@ -54,7 +62,6 @@ body {
 
 
 /* General Styles for the sections */
-
 header, main, footer {
     width: 100%;
 }
@@ -64,7 +71,7 @@ header {
 }
 
 section {
-    padding: 30px 90px;
+    padding: 30px var(--section-side-pad);
     background-color: var(--dark-blue);
     color: white;
 }
@@ -79,7 +86,17 @@ section#who-we-are {
 /* Limit maximum text width to prevent long lines */
 @media not screen and (max-width: 1200px) {
     section {
-        padding: 30px calc((100vw - 1020px) / 2);
+
+        /* Changes the padding to limit section width to 1200px */
+        /* The 90px is the normal side padding of the sections */
+        --section-side-pad: calc((100vw - (var(--large-screen) - 2 * 90px)) / 2);
+    }
+}
+@media screen and (max-width: 700px) {
+    section {
+
+        /* Gives more space for content in small screens */
+        --section-side-pad: 30px;
     }
 }
 
@@ -95,7 +112,6 @@ h1 {
 
 
 /* Navbar */
-
 nav {
     display: flex;
     position: absolute;
@@ -172,7 +188,6 @@ nav ul li:last-child a {
 
 
 /* 'Who we are' section  */
-
 #who-we-are img.info {
     position: relative;
     top: 5px;
@@ -195,7 +210,6 @@ nav ul li:last-child a {
 
 
 /* 'BEST Porto' section */
-
 #best-porto {
     display: flex;
     padding-top: 60px;
@@ -230,8 +244,57 @@ nav ul li:last-child a {
 }
 
 
-/* Footer Styles */
+/* 'Meet our members' section */
+#meet-our-members-title h1 {
+    text-align: center;
+}
+#meet-our-members-title h1::after {
+    display: block;
+    position: relative;
+    top: -1px;
+    left: calc(50% - 173px);
+    width: 180px;
+    height: 5px;
+    content: '';
+    background: white;
+    border-radius: var(--width-lines);
+}
+#meet-our-members-title h1::before {
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: -400px;      /* Note: This number is this big because of the zoom*/
+    content: url(icons/members.svg);
+    zoom: 4.3%;
+}
 
+#meet-our-members-title h2 {
+    font-family: var(--font-body);
+    font-weight: normal;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+#meet-our-members {
+    background-color: white;
+    color: var(--dark-blue);
+}
+
+#meet-our-members h2 {
+    font-weight: normal;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#meet-our-members > div {
+}
+
+
+
+/* Footer Styles */
 .page-end {
     background-color: var(--light-grey);
     text-align: center;
