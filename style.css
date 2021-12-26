@@ -391,6 +391,47 @@ nav ul.dropdown-links li {
 }
 
 
+/* 'Competitions' section */
+#competitions h1 {
+    text-align: center;
+}
+#competitions h1::after {
+    display: block;
+    position: relative;
+    top: -1px;
+    left: calc(50%);
+    width: calc(50% + var(--section-side-pad));
+    height: 5px;
+    content: '';
+    background: white;
+    border-radius: var(--width-lines);
+}
+#competitions h1::before {
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: -400px;      /* Note: This number is this big because of the zoom*/
+    content: url(icons/competitions.svg);
+    zoom: 4.3%;
+}
+
+#competitions > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#competitions div.content {
+    width: 55%;
+    margin: 20px;
+}
+#competitions div.image {
+    width: 45%;
+}
+#competitions div.image img {
+    width: 100%;
+    height: auto;
+}
+
 
 
 /* Footer Styles */
