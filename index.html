@@ -12,6 +12,9 @@
     <!--Style Sheets-->
     <link rel="stylesheet" href="style.css">
 
+    <!--JS Script-->
+    <script src="index.js"></script>
+
     <title>BEST Porto</title>
 </head>
 <body>
@@ -27,6 +30,21 @@
                     <li><a href="#local-events">Local Events</a></li>
                     <li><a href="#contacts">Contacts</a></li>
                     <li><a href="">PT</a> &VerticalSeparator; <a href="">EN</a></li>
+                </ul>
+            </div>
+            
+
+            <button class="dropdown mobile-only" onclick="dropdown()" onblur="dropdown(500)">
+                <div class="dropdown-icon"></div>
+                <div class="dropdown-icon"></div>
+                <div class="dropdown-icon"></div>
+            </button>
+            <div class="dropdown-items mobile-only">
+                <ul class="dropdown-links">
+                    <li><a href="#who-we-are">About us</a></li>
+                    <li><a href="#meet-our-members">Team</a></li>
+                    <li><a href="#local-events">Local Events</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
                 </ul>
             </div>
         </nav>

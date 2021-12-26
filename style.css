@@ -35,7 +35,7 @@
 
     /* Navbar */
     --navbar-height: 50px;
-    --navbar-logo-width: 30%;
+    --navbar-logo-width: 25%;
 
     
     /* Section side padding */
@@ -83,16 +83,37 @@ section#who-we-are {
     color: black;
 }
 
-/* Limit maximum text width to prevent long lines */
+/* Large screen configurations */
 @media not screen and (max-width: 1200px) {
+    .mobile-only {
+        display: none !important;
+    }
+    .pc-only {
+        display: inherit;
+    }
     section {
 
+        /* Limit maximum text width to prevent long lines */
         /* Changes the padding to limit section width to 1200px */
         /* The 90px is the normal side padding of the sections */
         --section-side-pad: calc((100vw - (var(--large-screen) - 2 * 90px)) / 2);
     }
 }
+
+
+/* Configurations for screen that are not small */
+@media not screen and (max-width: 700px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+
+/* Small scren configurations */
 @media screen and (max-width: 700px) {
+    .mobile-only {
+        display: inherit;
+    }
     section {
 
         /* Gives more space for content in small screens */
@@ -147,7 +168,7 @@ nav img {
 nav div.menu {
     width: calc(100% - var(--navbar-logo-width));
 }
-nav ul {
+nav div.menu ul {
     float: right;
     width: fit-content;
     margin: 0px;
@@ -155,22 +176,22 @@ nav ul {
     overflow: hidden;
     list-style-type: none;
 }
-nav ul li {
+nav div.menu ul li {
     display: inline-block;
     text-align: center;
     margin: 0px;
     padding: 6px 10px 12px 10px;
 }
-nav ul li a {
+nav div.menu ul li a {
     text-decoration: none;
     font-weight: 500;
     color: black;
 }
-nav ul li:last-child {
+nav div.menu ul li:last-child {
     font-weight: 800;
     font-size: 1.1em;
 }
-nav ul li:last-child a {
+nav div.menu ul li:last-child a {
     text-decoration: none;
     font-weight: 800;
     font-size: 1.1em;
@@ -178,13 +199,76 @@ nav ul li:last-child a {
 }
 
 
-/* Código temporário da navbar para dispositivos móveis */
+/* Change navbar for small screens */
 @media screen and (max-width: 700px) {
-    nav ul li:nth-child(-n + 4) {
+    nav div.menu {
+        margin-right: 40px;
+    }
+    nav div.menu ul li:nth-child(-n + 4) {
         display: none;
     }
 }
 
+/* Dropdown menu for small screens */
+nav button.dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    height: 80%;
+    margin: 0px;
+    padding: 2px 15px 7px;
+    border: none;
+    background-color: transparent;
+    -webkit-transition: background-color 0.1s;
+    -moz-transition: background-color 0.1s;
+    -o-transition: background-color 0.1s;
+    transition: background-color 0.1s;
+}
+nav button.dropdown:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+nav div.dropdown-icon {
+    background-color: black;
+    width: 30px;
+    height: 5px;
+    margin: auto;
+    padding: 0px;
+    border-radius: 8px;
+}
+nav div.dropdown:hover .dropdown-icon {
+    background-color: var(--dark-blue);
+}
+
+nav div.dropdown-items {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0px;
+    color: white;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-top: 2px solid black;
+    background-color: var(--dark-blue);
+    z-index: 1;
+}
+nav div.dropdown-items a {
+    font-size: 1.1;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+nav ul.dropdown-links {
+    margin: 15px 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+nav ul.dropdown-links li {
+    margin: 10px 0px;
+}
 
 
 /* 'Who we are' section  */
