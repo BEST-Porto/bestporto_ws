@@ -55,9 +55,11 @@ html {
 
 body {
     font-family: var(--font-body);
+    font-weight: 500;
     width: 100%;
     margin: 0;
     text-align: justify;
+    overflow-x: hidden;
 }
 
 
@@ -280,7 +282,6 @@ nav ul.dropdown-links li {
     width: auto;
     height: 1em;
 }
-
 #who-we-are h1::after {
     display: block;
     position: relative;
@@ -291,6 +292,82 @@ nav ul.dropdown-links li {
     content: '';
     background: black;
     border-radius: var(--width-lines);
+}
+
+#who-we-are div.text {
+    width: 75%;
+    margin: 20px;
+}
+
+#who-we-are {
+    --image-move-up: -60px;
+}
+#who-we-are div.BEST-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--image-move-up);
+}
+
+#who-we-are div.image {
+    position: relative;
+    top: calc(var(--image-move-up));
+    width: 35%;
+    margin: 0px;
+}
+#who-we-are div.image img {
+    width: 100%;
+    height: auto;
+}
+
+#who-we-are div.number-boxes {
+    position: relative;
+    top: -30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+#who-we-are div.number-boxes > div {
+    font-size: 0.7em;
+    font-weight: 600;
+    text-align: center;
+    min-width: 110px;
+    padding: 21px 0px;
+    margin: 15px auto;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+#who-we-are div.number-boxes > div span.num {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+@media screen and (max-width: 700px) {
+    /* Test uses the entire screen in mobile */
+    #who-we-are div.text {
+        width: 100%;
+    }
+    
+    /* Make sure the image is still visible for small screens */
+    #who-we-are div.image {
+        top: 0;
+        min-width: 100%;
+        margin: 0px;
+    }
+    #who-we-are div.image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Squares use more screen when the screen is small */
+    #who-we-are div.number-boxes {
+        width: 100%;
+        top: 0px;
+    }
 }
 
 
