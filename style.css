@@ -376,7 +376,7 @@ nav ul.dropdown-links li {
     display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-image: url(img/BEST-porto-members.jpeg);
+    background-image: url(img/inicio.jpg);
     background-size: cover;
     overflow: hidden;
 }
@@ -455,17 +455,17 @@ nav ul.dropdown-links li {
 #meet-our-members div.member-images {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 #meet-our-members div.member-images:last-child {
-    width: 72%;
+    width: 76%;
 }
 #meet-our-members div.member-images > div {
     width: 160px;
     min-width: 160px;
     height: 190px;
-    margin: 5px auto;
+    margin: 10px auto;
     border: var(--dark-blue) 4px solid;
 }
 
@@ -489,7 +489,7 @@ nav ul.dropdown-links li {
     display: inline-block;
     position: relative;
     top: 100px;
-    left: -400px;      /* Note: This number is this big because of the zoom*/
+    left: -200px;      /* Note: This number is this big because of the zoom*/
     content: url(icons/competitions.svg);
     zoom: 4.3%;
 }
@@ -502,20 +502,22 @@ nav ul.dropdown-links li {
     margin: 50px 0px;
 }
 #competitions div.content {
-    flex: 1 1 61%;
+    flex: 1 1 45%;
 }
 #competitions div.image-right {
-    flex: 1.2 1 39%; 
+    flex: 1.2 1 45%;
+    margin-left: 50px;
 }
 #competitions div.image-left {
-    flex: 1.2 1 39%; 
+    flex: 1.2 1 45%; 
+    margin-right: 50px;
 }
 
 #competitions div img {
     display: block;
     position: relative;
     width: 100%;
-    min-width: 200px;
+    min-width: 300px;
     height: auto;
 }
 #competitions div.image-right img {
@@ -536,12 +538,13 @@ nav ul.dropdown-links li {
 #competitions div.first-part ul li {
     display: inline-block;
     position: relative;
-    margin: 0px 5px;
+    margin: 0px 1px;
 }
 #competitions div.first-part ul li:nth-child(2n) {
     top: 30px;
 }
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 1000px) {
     #competitions div.first-part ul {
         display: flex;
         flex-wrap: wrap;
@@ -555,7 +558,7 @@ nav ul.dropdown-links li {
 }
 
 /*
-First part decorative line, I can't make it WORK :(
+First part decorative line, I can't make it WORK
 
 #competitions div.first-part::before {
     display: block;
@@ -581,6 +584,95 @@ First part decorative line, I can't make it WORK :(
     background: white;
     border-radius: var(--width-lines);
 }
+
+
+/* 'Educational Involvement' section */
+#educational-involvement {
+    font-weight: 400;    
+}
+
+#educational-involvement h1 {
+    text-align: center;
+}
+#educational-involvement h1::after {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: calc(50% - 85px);
+    width: 155px;
+    height: var(--width-lines);
+    content: '';
+    background: white;
+    border-radius: var(--width-lines);
+}
+#educational-involvement h1::before {
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: -250px;      /* Note: This number is this big because of the zoom*/
+    content: url(icons/educational\ inv.svg);
+    zoom: 5.4%;
+}
+
+#educational-involvement h2 {
+    font-family: var(--font-body);
+    font-size: 1.1em;
+    font-weight: 400;
+    text-align: center;
+    width: 75%;
+    margin: 40px auto 70px;
+}
+
+#educational-involvement ul {
+    list-style-image: url(icons/circ.png);
+    list-style-position: inside;
+}
+#educational-involvement ul::before {
+    display: block;
+    position: relative;
+    top: -30px;
+    left: 70%;
+    width: calc(30% + var(--section-side-pad));
+    height: var(--width-lines);
+    content: '';
+    background: white;
+    border-radius: var(--width-lines);
+}
+
+#educational-involvement ul li {
+    position: relative;
+    left: -50px;
+    width: 110%;
+    margin: 10px 0px;
+    text-indent: 50px;
+}
+
+#educational-involvement-statement {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    color: black;
+}
+#educational-involvement-statement p {
+    font-weight: 700;
+    margin-left: 25px;
+}
+
+/* This line is like this because there is no page break in the site */
+/* Need to ajust height to container, height: 100% doesn't work */
+#educational-involvement-statement::after {
+    z-index: -1;
+    display: block;
+    position: relative;
+    float: left;
+    top: -88px;
+    width: var(--width-lines);
+    height: 110px;
+    content: '';
+    background: black;
+    border-radius: var(--width-lines);
+}
+
 
 
 /* Footer Styles */
