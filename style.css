@@ -17,8 +17,10 @@
     /* Colors */
     --light-blue: #43678f;
     --dark-blue: #144173;
-    --dark-blue-trans: #144173d0;
-    --dark-blue-footer: #14417380;
+
+    /* Transparent dark blues for images and text */
+    --dark-blue-trans-img: #14417380;
+    --dark-blue-trans-text: #144173d0;
 
     --light-grey: #f1f1f1;
     --light-grey-trans: #f1f1f1ee;
@@ -276,6 +278,61 @@ nav ul.dropdown-links li {
 }
 
 
+
+/* Header */
+
+
+/* Probably use zoom: for small screens */
+header {
+    position: relative;
+    width: 100%;
+    height: calc(0.666 * 100vw);
+    max-height: 100vh;
+    margin: 0px;
+    background-image: url(img/inicio.jpg);
+    background-size: cover;
+}
+header div.header-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(0.666 * 100vw);
+    max-height: 100vh;
+    background-color: var(--dark-blue-trans-img);
+}
+
+header h1 {
+    position: relative;
+    top: 25%;
+    margin: 0px;
+    color: white;
+}
+
+header div.find-out-more {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 40px;
+    color: white;
+}
+header div.find-out-more::after {
+    position: relative;
+    top: 1.1em;
+    right: 67px;
+    content: '\2193';
+    font-size: 1.5em;
+}
+header div.find-out-more a {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 30px;
+    color: white;
+}
+
+
+
 /* 'Who we are' section  */
 #who-we-are img.info {
     position: relative;
@@ -389,7 +446,7 @@ nav ul.dropdown-links li {
     min-height: 50vh;
     margin: 0px;
     background-color: transparent;
-    box-shadow: 0 0 0 10000px var(--dark-blue-trans);
+    box-shadow: 0 0 0 10000px var(--dark-blue-trans-text);
 }
 #best-porto .content {
     width: 55%;
@@ -717,7 +774,7 @@ footer div.footer-cover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--dark-blue-footer);
+    background-color: var(--dark-blue-trans-img);
 }
 
 footer div.follow {
