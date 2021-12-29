@@ -18,7 +18,7 @@
     --light-blue: #43678f;
     --dark-blue: #144173;
     --dark-blue-trans: #144173d0;
-    --dark-blue-footer: #14417360;
+    --dark-blue-footer: #14417380;
 
     --light-grey: #f1f1f1;
     --light-grey-trans: #f1f1f1ee;
@@ -316,7 +316,6 @@ nav ul.dropdown-links li {
     position: relative;
     top: calc(var(--image-move-up));
     width: 35%;
-    margin: 0px;
 }
 #who-we-are div.image img {
     width: 100%;
@@ -363,6 +362,7 @@ nav ul.dropdown-links li {
     #who-we-are div.image img {
         width: 100%;
         height: auto;
+        margin: 0px 0px 30px 0px;
     }
 
     /* Squares use more screen when the screen is small */
@@ -724,6 +724,8 @@ footer div.follow {
     position: absolute;
     top: 150px;
     right: calc(50% + 120px);
+    min-width: 250px;
+    margin-left: 10px;
 }
 footer div.follow h1 {
     font-size: 2.8em;
@@ -760,7 +762,7 @@ footer::after {
     border-radius: var(--width-lines);
 }
 
-footer div.contacts{
+footer div.contacts {
     position: absolute;
     top: 130px;
     left: 50%;
@@ -777,6 +779,28 @@ footer address p {
 footer address a {
     text-decoration: none;
     color: white;
+}
+
+/* Change footer display for small screens */
+@media screen and (max-width: 750px) {
+    footer {
+        height: 800px;
+    }
+
+    footer div.follow {
+        left: 10px;
+    }
+
+    footer::after {
+        width: 273px;
+    }
+
+    footer div.contacts {
+        top: 330px;
+        right: 10px;
+        left: unset;
+        margin-left: 15px;
+    }
 }
 
 footer div.page-end {
