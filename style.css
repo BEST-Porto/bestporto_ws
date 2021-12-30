@@ -281,23 +281,23 @@ nav ul.dropdown-links li {
 
 /* Header */
 
-
-/* Probably use zoom: for small screens */
 header {
     position: relative;
     width: 100%;
-    height: calc(0.666 * 100vw);
-    max-height: 100vh;
+    height: clamp(600px, 1280px, 100vh);
     margin: 0px;
     background-image: url(img/inicio.jpg);
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 header div.header-cover {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(0.666 * 100vw);
+    height: clamp(600px, 1280px, 100vh);
     max-height: 100vh;
     background-color: var(--dark-blue-trans-img);
 }
@@ -305,8 +305,15 @@ header div.header-cover {
 header h1 {
     position: relative;
     top: 25%;
-    margin: 0px;
+    margin: 0px 20px;
     color: white;
+}
+
+/*  */
+@media screen and (max-width: 1000px) {
+    header h1 {
+        top: 18%;
+    }
 }
 
 header div.find-out-more {
@@ -408,11 +415,12 @@ header div.find-out-more a {
     /* Test uses the entire screen in mobile */
     #who-we-are div.text {
         width: 100%;
+        margin: 0px;
     }
     
     /* Make sure the image is still visible for small screens */
     #who-we-are div.image {
-        top: 0;
+        top: 0px;
         min-width: 100%;
         margin: 0px;
     }
@@ -437,6 +445,8 @@ header div.find-out-more a {
     padding-bottom: 60px;
     background-image: url(img/inicio.jpg);
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     overflow: hidden;
 }
 #best-porto .empty {
@@ -764,6 +774,7 @@ footer {
     height: 500px;
     background-image: url(img/follow\ us\ desfocada.png);
     background-size: cover;
+    background-position: center;
     background-position-y: -100px;
     color: white;
 }
