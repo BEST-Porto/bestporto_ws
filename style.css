@@ -663,6 +663,13 @@ header div.find-out-more a {
     left: -30px;
     box-shadow: 10px 8px 0px 0px black;
 }
+@media screen and (max-width: 700px) {
+        right: 0px;
+    }
+    #competitions div.image-left img {
+        left: 0px;
+    }
+}
 
 #competitions div.first-part ul {
     font-weight: bold;
@@ -712,8 +719,8 @@ First part decorative line, I can't make it WORK
     display: block;
     position: relative;
     top: -50px;
-    right: calc(-95%);
-    width: calc(5% + var(--section-side-pad));
+    right: -90%;
+    width: calc(15% + var(--section-side-pad));
     height: var(--width-lines);
     content: '';
     background: white;
@@ -766,8 +773,8 @@ First part decorative line, I can't make it WORK
     display: block;
     position: relative;
     top: -30px;
-    left: 70%;
-    width: calc(30% + var(--section-side-pad));
+    left: 75%;
+    width: calc(35% + var(--section-side-pad));
     height: var(--width-lines);
     content: '';
     background: white;
