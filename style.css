@@ -664,6 +664,7 @@ header div.find-out-more a {
     box-shadow: 10px 8px 0px 0px black;
 }
 @media screen and (max-width: 700px) {
+    #competitions div.image-right img {
         right: 0px;
     }
     #competitions div.image-left img {
