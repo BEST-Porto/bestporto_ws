@@ -2,7 +2,7 @@
 let navbarDropdown
 function dropdown(delay=0) {
     if (!navbarDropdown) {
-        navbarDropdown = document.getElementsByClassName('dropdown-items')[0]
+        navbarDropdown = document.getElementById('dropdown-items')
         navbarDropdown.isOpen = false
     }
 
@@ -15,4 +15,20 @@ function dropdown(delay=0) {
           navbarDropdown.isOpen = true
       }
     }, delay)
+}
+
+
+// Sticky navbar
+const navbar = document.getElementById('navbar')
+const offset = navbar.offsetTop
+window.onscroll = () => {
+    if (window.scrollY >= offset) {
+        navbar.style.position = 'fixed'
+        navbar.style.top = '-3px'
+    } else {
+        navbar.style.position = 'absolute'
+        navbar.style.top = `${offset}px`
+    }
+    console.log(window.scrollY)
+    console.log(offset)
 }
