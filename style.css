@@ -1,3 +1,15 @@
+/*
+Comments
+
+- Most comments are only to give clarification about what the code does
+
+- Some have tags, to make them easier to search for:
+    - [BUG]
+    - [TODO]
+
+*/
+
+
 /* Font */
 @font-face {
     font-family: 'League Spartan';
@@ -71,6 +83,7 @@ body {
 /* General Styles for the sections */
 header, main, footer {
     width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -108,7 +121,7 @@ section#who-we-are {
 }
 
 
-/* Configurations for screen that are not small */
+/* Large and medium screen configuration */
 @media not screen and (max-width: 700px) {
     .mobile-only {
         display: none !important;
@@ -116,7 +129,7 @@ section#who-we-are {
 }
 
 
-/* Small scren configurations */
+/* Small screen configurations */
 @media screen and (max-width: 700px) {
     .mobile-only {
         display: inherit;
@@ -127,6 +140,7 @@ section#who-we-are {
         --section-side-pad: 30px;
     }
 }
+
 
 
 /* Title Styles */
@@ -281,6 +295,7 @@ nav ul.dropdown-links li {
 
 /* Header */
 
+/* Fit header to screen and center background image with paralax */
 header {
     position: relative;
     width: 100%;
@@ -308,8 +323,6 @@ header h1 {
     margin: 0px 20px;
     color: white;
 }
-
-/*  */
 @media screen and (max-width: 1000px) {
     header h1 {
         top: 18%;
@@ -411,7 +424,7 @@ header div.find-out-more a {
     color: var(--dark-blue);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     /* Test uses the entire screen in mobile */
     #who-we-are div.text {
         width: 100%;
@@ -497,12 +510,12 @@ header div.find-out-more a {
     background: var(--dark-blue);
     border-radius: var(--width-lines);
 }
-#teams h1::before {
-    display: inline-block;
+#teams h1 img {
     position: relative;
-    left: -200px;      /* Note: This number is this big because of the zoom*/
-    content: url(icons/teams.svg);
-    zoom: 4.3%;
+    top: 2px;
+    left: -5px;
+    width: auto;
+    height: 1em;
 }
 
 #teams div.all-team-icons {
@@ -517,6 +530,7 @@ header div.find-out-more a {
     padding: 0px 10px;
 }
 
+/* [BUG] No Firefox os icons não aparecem */
 #teams div.all-team-icons div.team-icon {
     padding: 0px 15px;
 }
@@ -550,20 +564,19 @@ header div.find-out-more a {
     display: block;
     position: relative;
     top: -1px;
-    left: calc(50% - 173px);
+    left: calc(50% - 160px);
     width: 180px;
     height: var(--width-lines);
     content: '';
     background: white;
     border-radius: var(--width-lines);
 }
-#meet-our-members-title h1::before {
-    display: inline-block;
+#meet-our-members-title h1 img {
     position: relative;
-    top: 100px;
-    left: -400px;      /* Note: This number is this big because of the zoom*/
-    content: url(icons/members.svg);
-    zoom: 4.3%;
+    top: 10px;
+    left: -5px;
+    width: auto;
+    height: 1.3em;
 }
 
 #meet-our-members-title h2 {
@@ -620,13 +633,12 @@ header div.find-out-more a {
     background: white;
     border-radius: var(--width-lines);
 }
-#competitions h1::before {
-    display: inline-block;
+#competitions h1 img {
     position: relative;
-    top: 100px;
-    left: -200px;      /* Note: This number is this big because of the zoom*/
-    content: url(icons/competitions.svg);
-    zoom: 4.3%;
+    top: 10px;
+    left: -1px;
+    width: auto;
+    height: 1.1em;
 }
 
 #competitions > div {
@@ -701,6 +713,7 @@ header div.find-out-more a {
 }
 
 /*
+[TODO]
 First part decorative line, I can't make it WORK
 
 #competitions div.first-part::before {
@@ -748,13 +761,12 @@ First part decorative line, I can't make it WORK
     background: white;
     border-radius: var(--width-lines);
 }
-#educational-involvement h1::before {
-    display: inline-block;
+#educational-involvement h1 img {
     position: relative;
-    top: 100px;
-    left: -250px;      /* Note: This number is this big because of the zoom*/
-    content: url(icons/educational\ inv.svg);
-    zoom: 5.4%;
+    top: 8px;
+    left: -3px;
+    width: auto;
+    height: 1.2em;
 }
 
 #educational-involvement h2 {
@@ -832,13 +844,12 @@ First part decorative line, I can't make it WORK
     background: white;
     border-radius: var(--width-lines);
 }
-#local-events h1::before {
-    display: inline-block;
+#local-events h1 img {
     position: relative;
-    top: 50px;
-    left: -400px;      /* Note: This number is this big because of the zoom*/
-    content: url(icons/local\ events.svg);
-    zoom: 4.5%;
+    top: 3px;
+    left: -10px;
+    width: auto;
+    height: 1em;
 }
 
 
@@ -899,6 +910,7 @@ footer div.socials div::after {
     width: 40px;
     height: 40px;
     pointer-events: none;
+    border-radius: 5px;
 }
 footer div.socials div:hover::after {
     background: rgba(0, 0, 0, 0.2);
