@@ -43,7 +43,7 @@ const animationTargets = [
 
 // This is the easing function: https://easings.net/#easeOutQuint
 function easingFunction(t) {
-    return 1 - (1-t)**5
+    return 1 - (1-t)**6
 }
 
 // Check if an element is on the viewport
