@@ -6,7 +6,7 @@ headerCover.addEventListener('touchmove', (event) => {
     event.preventDefault()
 }, false)
 
-// Correct parallax, because background-attachment: fixed isn't supported after iOS 13
+// Disable parallax in iOS, because background-attachment: fixed isn't supported after iOS 13 :(
 let userAgentString = navigator.userAgent
 
 let chromeAgent = userAgentString.indexOf("Chrome") > -1        // Detect Chrome
@@ -20,25 +20,19 @@ if (safariAgent) {
 
     // Initial y position for parent containers of parallax images
 
-    // Disable background-attachment: fixed
+    // Disable parallax
     parallax.forEach((element) => {
         element.style.backgroundAttachment = 'unset'
+        element.style.backgroundPosition = 'center'
     })
-
-    let header = parallax[0]
-    let BESTPorto = parallax[1]
-
-    // Add JS parallax
-    document.addEventListener('scroll', () => {
-        header.style.backgroundPosition = `center ${window.pageYOffset}px`
-    })
-    BESTPorto.style.backgroundPosition = `center`
 }
 
 
 // Dropdown menu for small screens
 let navbarDropdown
-function dropdown(delay=0) {
+function dropdown(delay=0, onlyOff=false) {
+    // onlyOff says if it will only turn the navbar off, not on
+
     if (!navbarDropdown) {
         navbarDropdown = document.getElementById('dropdown-items')
         navbarDropdown.isOpen = false
@@ -48,7 +42,7 @@ function dropdown(delay=0) {
       if (navbarDropdown.isOpen) {
           navbarDropdown.style.display = 'none'
           navbarDropdown.isOpen = false
-      } else {
+      } else if (!onlyOff) {
           navbarDropdown.style.display = 'block'
           navbarDropdown.isOpen = true
       }

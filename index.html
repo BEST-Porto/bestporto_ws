@@ -38,17 +38,17 @@
             </div>
             
 
-            <button class="dropdown mobile-only" onclick="dropdown()" onblur="dropdown(500)">
+            <button class="dropdown mobile-only" onclick="dropdown()" onblur="dropdown(200, true)">
                 <div class="dropdown-icon"></div>
                 <div class="dropdown-icon"></div>
                 <div class="dropdown-icon"></div>
             </button>
             <div id="dropdown-items" class="dropdown-items mobile-only">
                 <ul class="dropdown-links">
-                    <li><a href="#who-we-are">About us</a></li>
-                    <li><a href="#meet-our-members">Team</a></li>
-                    <li><a href="#local-events">Local Events</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#who-we-are" onclick="dropdown(300, true)" >About us</a></li>
+                    <li><a href="#meet-our-members" onclick="dropdown(300, true)" >Team</a></li>
+                    <li><a href="#local-events" onclick="dropdown(300, true)" >Local Events</a></li>
+                    <li><a href="#contacts" onclick="dropdown(300, true)" >Contacts</a></li>
                 </ul>
             </div>
         </nav>

@@ -316,6 +316,7 @@ header div.header-cover {
     height: clamp(600px, 1280px, 100vh);
     max-height: 100vh;
     background-color: var(--dark-blue-trans-img);
+    pointer-events: none;
 }
 
 header h1 {
