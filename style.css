@@ -303,9 +303,9 @@ header {
     height: clamp(600px, 1280px, 100vh);
     margin: 0px;
     background-image: url(img/inicio.jpg);
-    background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 header div.header-cover {
@@ -458,9 +458,10 @@ header div.find-out-more a {
     padding-top: 60px;
     padding-bottom: 60px;
     background-image: url(img/inicio.jpg);
-    background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 #best-porto .empty {

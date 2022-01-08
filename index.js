@@ -1,3 +1,41 @@
+// Scripts for correcting the header in iOS
+
+// Prevent scrolling on the header-cover
+let headerCover = document.getElementById('header-cover')
+headerCover.addEventListener('touchmove', (event) => {
+    event.preventDefault()
+}, false)
+
+// Correct parallax, because background-attachment: fixed isn't supported after iOS 13
+let userAgentString = navigator.userAgent
+
+let chromeAgent = userAgentString.indexOf("Chrome") > -1        // Detect Chrome
+let safariAgent = userAgentString.indexOf("Safari") > -1        // Detect Safari
+  
+// Discard Safari since it also matches Chrome
+if ((chromeAgent) && (safariAgent)) safariAgent = false
+
+if (safariAgent) {
+    let parallax = Array.from(document.getElementsByClassName('js-background-parallax'))
+
+    // Initial y position for parent containers of parallax images
+
+    // Disable background-attachment: fixed
+    parallax.forEach((element) => {
+        element.style.backgroundAttachment = 'unset'
+    })
+
+    let header = parallax[0]
+    let BESTPorto = parallax[1]
+
+    // Add JS parallax
+    document.addEventListener('scroll', () => {
+        header.style.backgroundPosition = `center ${window.pageYOffset}px`
+    })
+    BESTPorto.style.backgroundPosition = `center`
+}
+
+
 // Dropdown menu for small screens
 let navbarDropdown
 function dropdown(delay=0) {
