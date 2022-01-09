@@ -908,7 +908,10 @@ First part decorative line, I can't make it WORK
 }
 
 #local-events div.carousel {
-    width: 100%;
+    /* This min function has to be the same as the one used for padding at #local-events */
+    /* It allows to set height as a function of vw, making sure the image is a square */
+    /* The total value of calc() should be equal to 100% parent width */
+    width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
     overflow: hidden;
 }
 #local-events div.carousel ul {
@@ -917,9 +920,6 @@ First part decorative line, I can't make it WORK
     padding: 0px;
 }
 #local-events div.carousel ul li {
-    /* This min function has to be the same as the one used at #local-events */
-    /* It allows to set height as a function of vw, making sure the image is a square */
-    /* The total value of calc() should be equal to 100% parent width */
     width: calc(1/3 * (100vw - 2 * min(var(--section-side-pad), 90px)));
     min-width: calc(1/3 * (100vw - 2 * min(var(--section-side-pad), 90px)));
     height: calc(1/3 * (100vw - 2 * min(var(--section-side-pad), 90px)));
@@ -939,7 +939,7 @@ First part decorative line, I can't make it WORK
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-    width: calc(100% - 35px);
+    width: calc(100% - 20px);
     height: 100%;
     margin: 0px;
     padding: 0px 10px;
@@ -952,6 +952,12 @@ First part decorative line, I can't make it WORK
 }
 #local-events div.carousel div.event-text img {
     width: 50%;
+    height: auto;
+}
+#local-events div.carousel div.event-text img.career-craft {
+    position: relative;
+    right: 40%;
+    width: 20%;
     height: auto;
 }
 #local-events div.carousel div.event-text p {
@@ -982,7 +988,6 @@ First part decorative line, I can't make it WORK
         width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
         min-width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
         height: calc(100vw - 2 * min(var(--section-side-pad), 90px));
-        overflow: hidden;
     }
 }
 
