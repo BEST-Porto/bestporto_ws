@@ -65,8 +65,8 @@ window.addEventListener('scroll', () => {
 
 
 // Animate numbers going up
-const animationDuration = 4000          // Duration of the animation in ms
-const animationSteps = 200               // Number of steps in the animation
+const animationDuration = 2000          // Duration of the animation in ms
+const animationSteps = 250               // Number of steps in the animation
 const animationTargets = [
     [document.getElementById('num-countries'), 32],
     [document.getElementById('num-groups'), 94],

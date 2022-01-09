@@ -634,7 +634,10 @@ header div.find-out-more a {
     background-color: var(--light-grey-trans);
     text-align: center;
     color: black;
-    transition: bottom .4s ease-in-out;
+    -webkit-transition: bottom .3s ease-in-out;
+    -moz-transition: bottom .3s ease-in-out;
+    -o-transition: bottom .3s ease-in-out;
+    transition: bottom .3s ease-in-out;
 }
 #meet-our-members div.member-images div.member-name > div {
     position: relative;
@@ -878,6 +881,10 @@ First part decorative line, I can't make it WORK
 
 
 /* 'Competitions' section */
+#local-events {
+    padding-left: min(var(--section-side-pad), 90px);
+    padding-right: min(var(--section-side-pad), 90px);
+}
 #local-events h1 {
     text-align: center;
 }
@@ -898,6 +905,85 @@ First part decorative line, I can't make it WORK
     left: -10px;
     width: auto;
     height: 1em;
+}
+
+#local-events div.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+#local-events div.carousel ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+}
+#local-events div.carousel ul li {
+    /* This min function has to be the same as the one used at #local-events */
+    /* It allows to set height as a function of vw, making sure the image is a square */
+    /* The total value of calc() should be equal to 100% parent width */
+    width: calc(1/3 * (100vw - 2 * min(var(--section-side-pad), 90px)));
+    min-width: calc(1/3 * (100vw - 2 * min(var(--section-side-pad), 90px)));
+    height: calc(1/3 * (100vw - 2 * min(var(--section-side-pad), 90px)));
+    overflow: hidden;
+}
+#local-events div.carousel img {
+    position: relative;
+    right: 25%;
+    width: 150%;
+    height: auto;
+}
+
+#local-events div.carousel div.event-text {
+    position: relative;
+    top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(100% - 35px);
+    height: 100%;
+    margin: 0px;
+    padding: 0px 10px;
+    background-color: var(--light-grey-trans);
+    overflow: hidden;
+    -webkit-transition: top .3s ease-in-out;
+    -moz-transition: top .3s ease-in-out;
+    -o-transition: top .3s ease-in-out;
+    transition: top .3s ease-in-out;
+}
+#local-events div.carousel div.event-text img {
+    width: 50%;
+    height: auto;
+}
+#local-events div.carousel div.event-text p {
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    color: black;
+}
+#local-events div.carousel div.event-text a {
+    display: block;
+    margin: auto;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+#local-events div.carousel ul li:hover div.event-text {
+    top: calc(-1 * 100% - 5px);
+}
+
+@media screen and (max-width: 1000px) {
+    #local-events div.carousel ul li {
+        /* This min function has to be the same as the one used at #local-events */
+        /* It allows to set height as a function of vw, making sure the image is a square */
+        /* The total value of calc() should be equal to 100% parent width */
+        width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
+        min-width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
+        height: calc(100vw - 2 * min(var(--section-side-pad), 90px));
+        overflow: hidden;
+    }
 }
 
 
