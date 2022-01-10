@@ -880,7 +880,7 @@ First part decorative line, I can't make it WORK
 }
 
 
-/* 'Competitions' section */
+/* 'Local Events' section */
 #local-events {
     padding-left: min(var(--section-side-pad), 90px);
     padding-right: min(var(--section-side-pad), 90px);
@@ -913,6 +913,13 @@ First part decorative line, I can't make it WORK
     /* The total value of calc() should be equal to 100% parent width */
     width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
     overflow: hidden;
+    position: relative;
+}
+#local-events div.carousel li.item-visible {
+    display: block;
+}
+#local-events div.carousel li.item-hidden {
+    display: none;
 }
 #local-events div.carousel ul {
     display: flex;
@@ -978,6 +985,22 @@ First part decorative line, I can't make it WORK
 
 #local-events div.carousel ul li:hover div.event-text {
     top: calc(-1 * 100% - 5px);
+}
+
+div.carousel div.carousel-buttons {
+    display: flex;
+    width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+div.carousel div.carousel-buttons button {
+    border: none;
+    background-color: transparent;
+    color: #f1f1f1;
+    font-size: 5em;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
