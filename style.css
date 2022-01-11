@@ -988,12 +988,13 @@ First part decorative line, I can't make it WORK
 }
 
 div.carousel div.carousel-buttons {
+    position: absolute;
+    top: 50%;
     display: flex;
     width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
     justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 div.carousel div.carousel-buttons button {
     border: none;
@@ -1001,6 +1002,7 @@ div.carousel div.carousel-buttons button {
     color: #f1f1f1;
     font-size: 5em;
     cursor: pointer;
+    pointer-events: visible;
 }
 
 @media screen and (max-width: 1000px) {
