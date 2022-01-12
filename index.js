@@ -129,9 +129,17 @@ function animateNumbers() {
 window.addEventListener('scroll', animateNumbers)
 
 // Carousel
-/*let itemIndex = 0;
+let itemIndex = 0;
+let previousIndex = 0;
+let limite = 1;
 const itemsCarousel = document.getElementsByClassName('carousel-item');
 const totalItems = itemsCarousel.length;
+//Variable depends on the quantity of images that appear simultaneously
+if(window.innerWidth > 1000 && document.documentElement.clientWidth > 1000){
+    limite = 3;
+} else {
+    limite = 1
+}
 
 document.getElementById('carouselButton--prev').addEventListener(
     "click", function() {
@@ -145,17 +153,29 @@ document.getElementById('carouselButton--next').addEventListener(
 )
 
 function updateCarousel() {
-    for (let itemCarousel of itemsCarousel) {
-        itemCarousel.classList.remove('item-visible');
-        itemCarousel.classList.add('item-hidden');
+    itemsCarousel[previousIndex].classList.toggle('item-visible');
+    itemsCarousel[previousIndex].classList.toggle('item-hidden');
+
+    if(limite = 3){
+        for(let i = 0; i < 3; i++ ){
+            itemsCarousel[itemIndex + i].classList.toggle('item-visible');
+            itemsCarousel[itemIndex + i].classList.remove('item-hidden');
+        }
+    } else {
+       itemsCarousel[itemIndex].classList.toggle('item-visible');
+    itemsCarousel[itemIndex].classList.remove('item-hidden'); 
     }
 
-    itemsCarousel[itemIndex].classList.add('item-visible');
+    console.log(itemsCarousel);
+    console.log(itemIndex);
 }
 
 function moveToNext() {
-    if(itemIndex === totalItems -1){
+    previousIndex = itemIndex;
+    if(itemIndex === totalItems - limite){
         itemIndex = 0;
+        itemsCarousel[itemIndex].classList.add('item-visible');
+        itemsCarousel[itemIndex].classList.remove('item-hidden');
     } else {
         itemIndex++;
     }
@@ -163,14 +183,16 @@ function moveToNext() {
     updateCarousel();
 }
 function moveToPrev() {
+    previousIndex = itemIndex;
     if(itemIndex === 0) {
-        itemIndex = totalItems - 1;
+        itemIndex = totalItems - limite;
     } else {
         itemIndex--;
     }
 
     updateCarousel();
-}*/
+}
+
 
 //Smooth Scroll
 const links = document.querySelectorAll('.menu a[href^="#"]');
