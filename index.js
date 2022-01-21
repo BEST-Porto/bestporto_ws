@@ -53,7 +53,8 @@ function dropdown(delay=0, onlyOff=false) {
 // Sticky navbar
 const navbar = document.getElementById('navbar')
 const offset = navbar.offsetTop
-window.addEventListener('scroll', () => {
+
+function checkNavbar() {
     if (window.scrollY >= offset) {
         navbar.style.position = 'fixed'
         navbar.style.top = '-3px'
@@ -61,7 +62,9 @@ window.addEventListener('scroll', () => {
         navbar.style.position = 'absolute'
         navbar.style.top = `${offset}px`
     }
-})
+}
+checkNavbar()
+window.addEventListener('scroll', checkNavbar)
 
 
 // Animate numbers going up
@@ -69,7 +72,7 @@ const animationDuration = 2000          // Duration of the animation in ms
 const animationSteps = 250               // Number of steps in the animation
 const animationTargets = [
     [document.getElementById('num-countries'), 32],
-    [document.getElementById('num-groups'), 94],
+    [document.getElementById('num-groups'), 87],
     [document.getElementById('num-students'), 3300]
 ]
 
