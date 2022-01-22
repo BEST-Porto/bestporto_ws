@@ -60,6 +60,11 @@ Comments
 
     /* Width of decorative lines*/
     --width-lines: 5px;
+
+
+    /* [BUG] - This is not working as intended */
+    /* Stop before hitting the title when scrolling */
+    /* scroll-padding-top: 120px; */
 }
 
 
@@ -122,7 +127,7 @@ section#who-we-are {
 
 
 /* Large and medium screen configuration */
-@media not screen and (max-width: 700px) {
+@media not screen and (max-width: 800px) {
     .mobile-only {
         display: none !important;
     }
@@ -130,7 +135,7 @@ section#who-we-are {
 
 
 /* Small screen configurations */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .mobile-only {
         display: inherit;
     }
@@ -151,6 +156,13 @@ h1 {
     font-size: 2.4em;
     margin-bottom: 10px;
 }
+
+
+/* Specific tag styles */
+abbr {
+    text-decoration: none;
+}
+
 
 
 /* Navbar */
@@ -202,7 +214,7 @@ nav div.menu ul li {
     display: inline-block;
     text-align: center;
     margin: 0px;
-    padding: 6px 10px 12px 10px;
+    padding: 6px 8px 12px 8px;
 }
 nav div.menu ul li a {
     text-decoration: none;
@@ -222,11 +234,11 @@ nav div.menu ul li:last-child a {
 
 
 /* Change navbar for small screens */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     nav div.menu {
         margin-right: 40px;
     }
-    nav div.menu ul li:nth-child(-n + 4) {
+    nav div.menu ul li:nth-child(-n + 5) {
         display: none;
     }
 }
@@ -289,7 +301,7 @@ nav ul.dropdown-links {
     list-style-type: none;
 }
 nav ul.dropdown-links li {
-    margin: 10px 0px;
+    margin: 15px 0px;
 }
 
 
@@ -577,7 +589,7 @@ header div.find-out-more a {
     display: block;
     position: relative;
     top: -1px;
-    left: calc(50% - 160px);
+    left: calc(50% + 35px);
     width: 180px;
     height: var(--width-lines);
     content: '';
@@ -681,6 +693,10 @@ header div.find-out-more a {
 
 
 /* 'Competitions' section */
+#competitions {
+    margin-bottom: 60px;
+}
+
 #competitions h1 {
     text-align: center;
 }
@@ -747,30 +763,24 @@ header div.find-out-more a {
 }
 
 #competitions div.first-part ul {
+    display: flex;
+    flex-wrap: wrap;
     font-weight: bold;
+    max-width: 370px;
     margin: 30px 0px;
     padding: 0px;
     list-style: none;
 }
 #competitions div.first-part ul li {
     display: inline-block;
-    position: relative;
-    margin: 0px 1px;
+    position: initial;
+    flex: 1 1 120px;
+    margin: 10px 5px;
 }
-#competitions div.first-part ul li:nth-child(2n) {
-    top: 30px;
-}
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
     #competitions div.first-part ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    #competitions div.first-part ul li {
-        display: inline-block;
-        position: initial;
-        flex: 1 1 120px;
-        margin: 10px 5px;
+        max-width: unset;
+        text-align: center;
     }
 }
 
@@ -897,14 +907,16 @@ First part decorative line, I can't make it WORK
     padding-right: min(var(--section-side-pad), 90px);
 }
 #local-events h1 {
+    width: fit-content;
+    margin: auto;
     text-align: center;
 }
 #local-events h1::after {
     display: block;
     position: relative;
     top: -1px;
-    left: calc(37%);
-    width: calc(63% + var(--section-side-pad));
+    left: calc(50%);
+    width: calc(250% + var(--section-side-pad));
     height: var(--width-lines);
     content: '';
     background: white;
@@ -945,8 +957,7 @@ First part decorative line, I can't make it WORK
 }
 #local-events div.carousel img {
     position: relative;
-    right: 25%;
-    width: 150%;
+    width: 100%;
     height: auto;
 }
 
@@ -957,10 +968,11 @@ First part decorative line, I can't make it WORK
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-    width: calc(100% - 20px);
+    font-size: clamp(0.8em, 1.6vw, 1.4em);
+    width: calc(100% - 100px);
     height: 100%;
     margin: 0px;
-    padding: 0px 10px;
+    padding: 0px 50px;
     background-color: var(--light-grey-trans);
     overflow: hidden;
     -webkit-transition: top .3s ease-in-out;
@@ -968,15 +980,23 @@ First part decorative line, I can't make it WORK
     -o-transition: top .3s ease-in-out;
     transition: top .3s ease-in-out;
 }
+@media screen and (max-width: 1150px) {
+    #local-events div.carousel div.event-text {
+        width: calc(100% - 20px);
+        padding: 0px 10px;
+        z-index: 2;
+        pointer-events: none;
+    }
+}
+
+
 #local-events div.carousel div.event-text img {
     width: 50%;
     height: auto;
+    margin: auto;
 }
 #local-events div.carousel div.event-text img.career-craft {
-    position: relative;
-    right: 40%;
     width: 20%;
-    height: auto;
 }
 #local-events div.carousel div.event-text p {
     width: 100%;
@@ -1010,8 +1030,8 @@ div.carousel div.carousel-buttons {
 div.carousel div.carousel-buttons button {
     border: none;
     background-color: transparent;
-    color: #f1f1f1;
-    font-size: 5em;
+    color: white;
+    font-size: 8em;
     cursor: pointer;
     pointer-events: visible;
 }
@@ -1024,6 +1044,17 @@ div.carousel div.carousel-buttons button {
         width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
         min-width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
         height: calc(100vw - 2 * min(var(--section-side-pad), 90px));
+    }
+    #local-events div.carousel div.event-text {
+        width: calc(100% - 100px);
+        font-size: clamp(0.8em, 4vw, 1.6em);
+        padding: 0px 50px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #local-events div.carousel div.event-text {
+        width: calc(100% - 40px);
+        padding: 0px 20px;
     }
 }
 
