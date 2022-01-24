@@ -110,12 +110,6 @@ section#who-we-are {
 
 /* Large screen configurations */
 @media not screen and (max-width: 1200px) {
-    .mobile-only {
-        display: none !important;
-    }
-    .pc-only {
-        display: inherit;
-    }
     section {
 
         /* Limit maximum text width to prevent long lines */
@@ -126,19 +120,8 @@ section#who-we-are {
 }
 
 
-/* Large and medium screen configuration */
-@media not screen and (max-width: 800px) {
-    .mobile-only {
-        display: none !important;
-    }
-}
-
-
 /* Small screen configurations */
 @media screen and (max-width: 800px) {
-    .mobile-only {
-        display: inherit;
-    }
     section {
 
         /* Gives more space for content in small screens */
@@ -234,12 +217,20 @@ nav div.menu ul li:last-child a {
 
 
 /* Change navbar for small screens */
-@media screen and (max-width: 800px) {
+@media not screen and (max-width: 1100px) {
+    .navbar-mobile {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 1100px) {
     nav div.menu {
         margin-right: 40px;
     }
-    nav div.menu ul li:nth-child(-n + 5) {
+    nav div.menu ul li:nth-child(-n + 6) {
         display: none;
+    }
+    .navbar-mobile {
+        display: inherit;
     }
 }
 
