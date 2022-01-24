@@ -30,6 +30,10 @@ Comments
     --light-blue: #43678f;
     --dark-blue: #144173;
 
+    --green: #70B22C;
+    --orange: #F2A026;
+
+
     /* Transparent dark blues for images and text */
     --dark-blue-trans-img: #14417380;
     --dark-blue-trans-text: #144173d0;
@@ -636,6 +640,15 @@ header div.find-out-more a {
     border: var(--dark-blue) 4px solid;
     overflow-y: hidden;
 }
+
+/* Experimentar cores */
+#meet-our-members div.member-images div.member {
+    border-color: var(--orange);
+}
+#meet-our-members div.member-images:nth-child(2) div.member {
+    border-color: var(--green);
+}
+
 
 #meet-our-members div.member-images div.member-name {
     display: flex;
