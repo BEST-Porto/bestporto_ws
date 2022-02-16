@@ -905,6 +905,38 @@ First part decorative line, I can't make it WORK
 }
 
 
+/* 'BEST Courses' section */
+#best-courses h1 {
+    text-align: center;
+}
+#best-courses h1::after {
+    display: block;
+    position: relative;
+    top: -1px;
+    left: calc(-1 * var(--section-side-pad));
+    width: calc(50% + var(--section-side-pad) + 140px);
+    height: var(--width-lines);
+    content: '';
+    background: white;
+    border-radius: var(--width-lines);
+}
+
+#best-courses h2 {
+    padding-top: 25px;
+}
+
+#best-courses ul li {
+    padding: 5px 0px;
+}
+
+#best-courses a {
+    color: white;
+}
+#best-courses a:hover {
+    text-decoration: none;
+}
+
+
 /* 'Local Events' section */
 #local-events {
     padding-left: min(var(--section-side-pad), 90px);
@@ -1016,6 +1048,7 @@ First part decorative line, I can't make it WORK
     font-size: 1.2em;
     background-color: var(--dark-blue);
     color: white;
+    pointer-events: all;
 }
 
 #local-events div.carousel ul li:hover div.event-text {
