@@ -132,6 +132,14 @@ section#who-we-are {
         --section-side-pad: 30px;
     }
 }
+/* Very Small screen configurations */
+@media screen and (max-width: 500px) {
+    section {
+
+        /* Gives more space for content in small screens */
+        --section-side-pad: 20px;
+    }
+}
 
 
 
@@ -735,18 +743,18 @@ header div.find-out-more a {
 }
 #competitions div.image-right {
     flex: 1.2 1 45%;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 #competitions div.image-left {
     flex: 1.2 1 45%; 
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 #competitions div img {
     display: block;
     position: relative;
     width: 100%;
-    min-width: 300px;
+    min-width: 350px;
     height: auto;
 }
 #competitions div.image-right img {
@@ -756,14 +764,6 @@ header div.find-out-more a {
 #competitions div.image-left img {
     left: -30px;
     box-shadow: 10px 8px 0px 0px black;
-}
-@media screen and (max-width: 700px) {
-    #competitions div.image-right img {
-        right: 0px;
-    }
-    #competitions div.image-left img {
-        left: 0px;
-    }
 }
 
 #competitions div.first-part ul {
@@ -872,7 +872,7 @@ First part decorative line, I can't make it WORK
 
 #educational-involvement ul li {
     position: relative;
-    left: -50px;
+    left: -40px;
     width: 110%;
     margin: 10px 0px;
     text-indent: 50px;
@@ -937,6 +937,54 @@ First part decorative line, I can't make it WORK
 }
 
 
+#best-courses > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+#best-courses div.content {
+    flex: 1 1 45%;
+}
+#best-courses div.image-right {
+    flex: 1.2 1 45%;
+    margin-left: 15px;
+}
+#best-courses div.image-left {
+    flex: 1.2 1 45%; 
+    margin-right: 15px;
+}
+
+#best-courses div img {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 450px;
+    height: auto;
+    margin: 30px 0px;
+}
+#best-courses div.image-right img {
+    right: -30px;
+    box-shadow: -10px 8px 0px 0px black;
+}
+#best-courses div.image-left img {
+    left: -30px;
+    box-shadow: 10px 8px 0px 0px black;
+}
+
+@media screen and (max-width: 1050px) {
+    #best-courses div.image-right img:nth-child(2),
+    #best-courses div.image-left img:nth-child(2) {
+        display: none;
+    }
+    #best-courses div.image-right img,
+    #best-courses div.image-left img {
+        margin: 0px;
+    }
+}
+
+
 /* 'Local Events' section */
 #local-events {
     padding-left: min(var(--section-side-pad), 90px);
@@ -967,10 +1015,7 @@ First part decorative line, I can't make it WORK
 }
 
 #local-events div.carousel {
-    /* This min function has to be the same as the one used for padding at #local-events */
-    /* It allows to set height as a function of vw, making sure the image is a square */
-    /* The total value of calc() should be equal to 100% parent width */
-    width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -986,6 +1031,9 @@ First part decorative line, I can't make it WORK
     padding: 0px;
 }
 #local-events div.carousel ul li {
+    /* This min function has to be the same as the one used for padding at #local-events */
+    /* It allows to set height as a function of vw, making sure the image is a square */
+    /* The total value of calc() should be equal to 100% parent width */
     width: calc(1/3 * (100vw - 2 * min(var(--section-side-pad), 90px)));
     min-width: calc(1/3 * (100vw - 2 * min(var(--section-side-pad), 90px)));
     height: calc(1/3 * (100vw - 2 * min(var(--section-side-pad), 90px)));
@@ -1059,7 +1107,7 @@ div.carousel div.carousel-buttons {
     position: absolute;
     top: 50%;
     display: flex;
-    width: calc(100vw - 2 * min(var(--section-side-pad), 90px));
+    width: 100%;
     justify-content: space-between;
     transform: translateY(-50%);
     pointer-events: none;
@@ -1068,7 +1116,7 @@ div.carousel div.carousel-buttons button {
     border: none;
     background-color: transparent;
     color: white;
-    font-size: 8em;
+    font-size: 10em;
     cursor: pointer;
     pointer-events: visible;
 }
@@ -1084,7 +1132,7 @@ div.carousel div.carousel-buttons button {
     }
     #local-events div.carousel div.event-text {
         width: calc(100% - 100px);
-        font-size: clamp(0.8em, 4vw, 1.6em);
+        font-size: clamp(0.8em, 4vw, 1.3em);
         padding: 0px 50px;
     }
 }
@@ -1100,7 +1148,7 @@ div.carousel div.carousel-buttons button {
 footer {
     position: absolute;
     height: 500px;
-    background-image: url(img/follow\ us\ desfocada.png);
+    background-image: url(img/follow-us-desfocada.png);
     background-size: cover;
     background-position: center;
     background-position-y: -100px;
