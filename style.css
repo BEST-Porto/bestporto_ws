@@ -705,10 +705,6 @@ header div.find-out-more a {
 
 
 /* 'Competitions' section */
-#competitions {
-    margin-bottom: 60px;
-}
-
 #competitions h1 {
     text-align: center;
 }
@@ -820,7 +816,9 @@ First part decorative line, I can't make it WORK
 
 /* 'Educational Involvement' section */
 #educational-involvement {
-    font-weight: 400;    
+    font-weight: 600;
+    background-color: white;
+    color: var(--dark-blue);
 }
 
 #educational-involvement h1 {
@@ -855,7 +853,7 @@ First part decorative line, I can't make it WORK
 }
 
 #educational-involvement ul {
-    list-style-image: url(icons/circ.png);
+    list-style-image: url(icons/circ-azul.png);
     list-style-position: inside;
 }
 #educational-involvement ul::before {
