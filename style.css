@@ -958,9 +958,8 @@ First part decorative line, I can't make it WORK
     display: block;
     position: relative;
     width: 100%;
-    min-width: 450px;
+    min-width: 350px;
     height: auto;
-    margin: 30px 0px;
 }
 #best-courses div.image-right img {
     right: -30px;
@@ -969,21 +968,6 @@ First part decorative line, I can't make it WORK
 #best-courses div.image-left img {
     left: -30px;
     box-shadow: 10px 8px 0px 0px black;
-}
-@media screen and (max-width: 1050px) {
-    #best-courses div.image-right img:nth-child(2),
-    #best-courses div.image-left img:nth-child(2) {
-        display: none;
-    }
-    #best-courses div img {
-        margin: 0px;
-    }
-}
-/* On very small screens, images can be very small */
-@media screen and (max-width: 500px) {
-    #best-courses div img {
-        min-width: 250px;
-    }
 }
 
 
