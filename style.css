@@ -819,6 +819,7 @@ First part decorative line, I can't make it WORK
     font-weight: 600;
     background-color: white;
     color: var(--dark-blue);
+    font-weight: bold;
 }
 
 #educational-involvement h1 {
@@ -832,7 +833,7 @@ First part decorative line, I can't make it WORK
     width: 155px;
     height: var(--width-lines);
     content: '';
-    background: white;
+    background: var(--dark-blue);
     border-radius: var(--width-lines);
 }
 #educational-involvement h1 img {
@@ -849,7 +850,7 @@ First part decorative line, I can't make it WORK
     font-weight: 400;
     text-align: center;
     width: 75%;
-    margin: 40px auto 70px;
+    margin: 40px auto 20px;
 }
 
 #educational-involvement ul {
@@ -970,7 +971,7 @@ First part decorative line, I can't make it WORK
     left: -30px;
     box-shadow: 10px 8px 0px 0px black;
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 900px) {
     #best-courses div.image-right img:nth-child(2),
     #best-courses div.image-left img:nth-child(2) {
         display: none;
