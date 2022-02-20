@@ -65,10 +65,9 @@ Comments
     /* Width of decorative lines*/
     --width-lines: 5px;
 
-
-    /* [BUG] - This is not working as intended */
+    
     /* Stop before hitting the title when scrolling */
-    /* scroll-padding-top: 120px; */
+    scroll-padding-top: 40px;
 }
 
 

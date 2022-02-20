@@ -131,87 +131,74 @@ function animateNumbers() {
 
 window.addEventListener('scroll', animateNumbers)
 
+
 // Carousel
-let itemIndex = 0;
-let previousIndex = 0;
-let limite = 1;
-const itemsCarousel = document.getElementsByClassName('carousel-item');
-const totalItems = itemsCarousel.length;
-//Variable depends on the quantity of images that appear simultaneously
-if(window.innerWidth > 1000 && document.documentElement.clientWidth > 1000){
-    limite = 3;
-} else {
-    limite = 1
-}
+let itemIndex = 0
+let previousIndex = 0
+let limit = 1
+let start = 0
 
-document.getElementById('carouselButton--prev').addEventListener(
-    "click", function() {
-        moveToPrev();
-    }
-)
-document.getElementById('carouselButton--next').addEventListener(
-    "click", function() {
-        moveToNext();
-    }
-)
+const itemsCarousel = document.getElementsByClassName('carousel-item')
+const totalItems = itemsCarousel.length
 
-function updateCarousel() {
-    itemsCarousel[previousIndex].classList.toggle('item-visible');
-    itemsCarousel[previousIndex].classList.toggle('item-hidden');
-
-    if(limite = 3){
-        for(let i = 0; i < 3; i++ ){
-            itemsCarousel[itemIndex + i].classList.toggle('item-visible');
-            itemsCarousel[itemIndex + i].classList.remove('item-hidden');
-        }
+// Variable depends on the quantity of images that appear simultaneously
+function numImages() {
+    smallScreenCarousel = window.matchMedia("(max-width: 1000px)")
+    if (smallScreenCarousel.matches) {
+        limit = 1
     } else {
-       itemsCarousel[itemIndex].classList.toggle('item-visible');
-    itemsCarousel[itemIndex].classList.remove('item-hidden'); 
+        limit = 3
     }
-
-    console.log(itemsCarousel);
-    console.log(itemIndex);
 }
+numImages()
 
+window.addEventListener('resize', () => {
+    numImages()
+    updateCarousel()
+})
+
+
+// Change the indexes of images that will be displayed
 function moveToNext() {
-    previousIndex = itemIndex;
-    if(itemIndex === totalItems - limite){
-        itemIndex = 0;
-        itemsCarousel[itemIndex].classList.add('item-visible');
-        itemsCarousel[itemIndex].classList.remove('item-hidden');
+    if (start + limit < totalItems) {
+        start++
     } else {
-        itemIndex++;
+        start = 0
     }
-
-    updateCarousel();
+    updateCarousel()
 }
-function moveToPrev() {
-    previousIndex = itemIndex;
-    if(itemIndex === 0) {
-        itemIndex = totalItems - limite;
+function moveToPrev () {
+    if (start > 0) {
+        start --
     } else {
-        itemIndex--;
+        start = totalItems - 1
     }
-
-    updateCarousel();
+    updateCarousel()
 }
 
 
-//Smooth Scroll
-const links = document.querySelectorAll('.menu a[href^="#"]');
+// Add the listeners to the buttons
+document.getElementById('carouselButton--next').addEventListener("click", () => { moveToNext() })
+document.getElementById('carouselButton--prev').addEventListener("click", () => { moveToPrev() })
 
-function scrollToSection(event) {
-    event.preventDefault();
-    const href = event.currentTarget.getAttribute('href');
-    const section = document.querySelector(href);
-    const start = section.offsetTop;
-
-    window.scrollTo({
-        top: start,
-        behavior: 'smooth',
-    });
+// Show and hide images
+function showImage(imageIndex) {
+    itemsCarousel[imageIndex].classList.add('item-visible')
+    itemsCarousel[imageIndex].classList.remove('item-hidden')
+}
+function hideImage(imageIndex) {
+    itemsCarousel[imageIndex].classList.remove('item-visible')
+    itemsCarousel[imageIndex].classList.add('item-hidden')
 }
 
-links.forEach((link) => {
-    link.addEventListener('click', scrollToSection);
-});
+// Update the Carousel
+function updateCarousel() {
+    for (let i = 0; i < totalItems; i++) {
+        if (start <= i && i < start + limit) {
+            showImage(i)
+        } else {
+            hideImage(i)
+        }
+    }
+}
+updateCarousel()
