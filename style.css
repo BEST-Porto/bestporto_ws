@@ -704,6 +704,40 @@ header div.find-out-more a {
     bottom: 0;
 }
 
+/* Members' images */
+#meet-our-members div.member {
+    background-size: cover;
+    background-position: center;
+}
+#meet-our-members #member-1 {
+    background-image: url('img/members/board-external.png');
+    background-position-y: -20px;
+}
+#meet-our-members #member-2 {
+    background-image: url('img/members/board-treasurer.png');
+}
+#meet-our-members #member-3 {
+    background-image: url('img/members/board-presi.png');
+}
+#meet-our-members #member-4 {
+    background-image: url('img/members/board-secretary.png');
+}
+#meet-our-members #member-5 {
+    background-image: url('img/members/board-hr.png');
+}
+#meet-our-members #member-6 {
+    background-image: url('img/members/management-cr.png');
+}
+#meet-our-members #member-7 {
+    background-image: url('img/members/management-mkt.png');
+}
+#meet-our-members #member-8 {
+    background-image: url('img/members/management-comp.png');
+}
+#meet-our-members #member-9 {
+    background-image: url('img/members/management-it.png');
+}
+
 
 /* 'Competitions' section */
 #competitions h1 {
