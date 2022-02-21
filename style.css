@@ -641,10 +641,10 @@ header div.find-out-more a {
 
 #meet-our-members div.member-images div.member {
     position: relative;
-    max-width: 170px;
-    width: 170px;
-    min-width: 170px;
-    height: 190px;
+    max-width: 180px;
+    width: 180px;
+    min-width: 180px;
+    height: 200px;
     margin: 10px;
     border: var(--dark-blue) 4px solid;
     overflow-y: hidden;
