@@ -50,7 +50,7 @@ Comments
 
     /* Screen Sizes considered small and large -> To be confirmed */
     --small-screen: 700px;
-    --large-screen: 1200px;
+    --large-screen: 1400px;
 
 
     /* Navbar */
@@ -80,6 +80,7 @@ html {
 body {
     font-family: var(--font-body);
     font-weight: 500;
+    font-size: 1.05em;
     width: 100%;
     margin: 0;
     text-align: justify;
@@ -631,24 +632,25 @@ header div.find-out-more a {
 #meet-our-members div.member-images {
     display: flex;
     flex-wrap: wrap;
-    width: 95%;
+    justify-content: space-around;
     margin: auto;
 }
 #meet-our-members div.member-images:last-child {
-    width: 76%;
+    width: 80%;
 }
 
 #meet-our-members div.member-images div.member {
     position: relative;
+    max-width: 170px;
     width: 170px;
     min-width: 170px;
     height: 190px;
-    margin: 10px auto;
+    margin: 10px;
     border: var(--dark-blue) 4px solid;
     overflow-y: hidden;
 }
 
-/* Experimentar cores */
+/* Colors for the members' borders */
 #meet-our-members div.member-images div.member {
     border-color: var(--orange);
 }
@@ -735,6 +737,7 @@ header div.find-out-more a {
 }
 #competitions div.content {
     flex: 1 1 45%;
+    margin-top: 20px;
 }
 #competitions div.image-right {
     flex: 1.2 1 45%;
@@ -761,6 +764,9 @@ header div.find-out-more a {
     box-shadow: 10px 8px 0px 0px black;
 }
 
+#competitions div.first-part {
+    margin-top: 40px;
+}
 #competitions div.first-part ul {
     display: flex;
     flex-wrap: wrap;
@@ -777,6 +783,9 @@ header div.find-out-more a {
     margin: 10px 5px;
 }
 @media screen and (max-width: 850px) {
+    #competitions div.first-part {
+        margin-top: 20px;
+    }
     #competitions div.first-part ul {
         max-width: unset;
         text-align: center;
@@ -846,7 +855,7 @@ First part decorative line, I can't make it WORK
 #educational-involvement h2 {
     font-family: var(--font-body);
     font-size: 1.1em;
-    font-weight: 400;
+    font-weight: bold;
     text-align: center;
     width: 75%;
     margin: 40px auto 20px;
@@ -880,7 +889,7 @@ First part decorative line, I can't make it WORK
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: transparent;
-    color: black;
+    color: var(--dark-blue);
 }
 #educational-involvement-statement p {
     font-weight: 700;
@@ -898,7 +907,7 @@ First part decorative line, I can't make it WORK
     width: var(--width-lines);
     height: 110px;
     content: '';
-    background: black;
+    background: var(--dark-blue);
     border-radius: var(--width-lines);
 }
 
