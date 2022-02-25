@@ -715,15 +715,19 @@ header div.find-out-more a {
 }
 #meet-our-members #member-2 {
     background-image: url('img/members/board-treasurer.png');
+    background-position-y: -5px;
 }
 #meet-our-members #member-3 {
     background-image: url('img/members/board-presi.png');
+    background-position-y: 0px;
+    background-repeat: no-repeat;
 }
 #meet-our-members #member-4 {
     background-image: url('img/members/board-secretary.png');
 }
 #meet-our-members #member-5 {
     background-image: url('img/members/board-hr.png');
+    background-position-y: 0px;
 }
 #meet-our-members #member-6 {
     background-image: url('img/members/management-cr.png');

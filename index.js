@@ -169,9 +169,9 @@ function moveToNext() {
 }
 function moveToPrev () {
     if (start > 0) {
-        start --
+        start--
     } else {
-        start = totalItems - 1
+        start = totalItems - limit
     }
     updateCarousel()
 }
