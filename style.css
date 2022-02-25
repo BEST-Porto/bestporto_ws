@@ -355,6 +355,9 @@ header div.find-out-more::after {
     content: '\2193';
     font-size: 1.5em;
 }
+header div.find-out-more.pt::after {
+    right: 55px;
+}
 header div.find-out-more a {
     font-size: 1.1em;
     font-weight: 500;

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" href="favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--JS Script-->
+    <script defer src="index.js"></script>
+
+    <title>BEST Porto</title>
+</head>
+<body>
+    <!--This class is used in JS to make parallax work in iOS-->
+    <header class="js-background-parallax">
+        <div id="header-cover" class="header-cover"></div>
+        <nav id="navbar">
+            <div class="logo">
+                <img src="icons/best porto.svg" alt="Logo BEST Porto">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#who-we-are">Sobre nós</a></li>
+                    <li><a href="#meet-our-members-title">Membros</a></li>
+                    <li><a href="#competitions">Competições</a></li>
+                    <li><a href="#educational-involvement">Educação</a></li>
+                    <li><a href="#local-events">Eventos</a></li>
+                    <li><a href="#contacts">Contactos</a></li>
+                    <li><a href="/index-pt.html">PT</a> &VerticalSeparator; <a href="/index.html">EN</a></li>
+                </ul>
+            </div>
+            
+
+            <button class="dropdown navbar-mobile" onclick="dropdown()" onblur="dropdown(200, true)">
+                <div class="dropdown-icon"></div>
+                <div class="dropdown-icon"></div>
+                <div class="dropdown-icon"></div>
+            </button>
+            <div id="dropdown-items" class="dropdown-items navbar-mobile">
+                <ul class="dropdown-links">
+                    <li><a href="#who-we-are" onclick="dropdown(300, true)">Sobre nós</a></li>
+                    <li><a href="#meet-our-members-title" onclick="dropdown(300, true)">Membros</a></li>
+                    <li><a href="#competitions" onclick="dropdown(300, true)">Competições</a></li>
+                    <li><a href="#educational-involvement" onclick="dropdown(300, true)">Educação</a></li>
+                    <li><a href="#local-events" onclick="dropdown(300, true)">Eventos</a></li>
+                    <li><a href="#contacts" onclick="dropdown(300, true)">Contactos</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>BECOME THE BEST YOU CAN BE </h1>
+        <div class="find-out-more pt">
+            <a href="#who-we-are">Sabe mais</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="who-we-are">
+            <h1>
+                <img class="info" src="icons/who we are.svg" alt="Information Symbol"> 
+                Quem somos
+            </h1>
+
+            <div class="text">
+                <p>
+                    O BEST (Board of European Students of Technology) é 
+                    uma organização europeia não governamental e sem fins 
+                    lucrativos, criada por estudantes de tecnologia. 
+                    Promove o desenvolvimento de estudantes de 
+                    tecnologia diariamente, fornecendo-lhes ferramentas 
+                    que complementam a sua área de estudo e incentivando 
+                    a comunicação e cooperação internacional, 
+                    garantindo a troca de experiências e valores.
+                </p>
+            </div>
+            <div class="BEST-data">
+                <div id="number-boxes" class="number-boxes">
+                    <div>
+                        Presente em <br> <span id="num-countries" class="num">32</span> <br> países
+                    </div>
+                    <div>
+                        Dividido em <br> <span id="num-groups" class="num">87</span> <br> Grupos Locais
+                    </div>
+                    <div>
+                        Conta com <br> <span id="num-students" class="num">3300</span> <br> estudantes
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="img/who we are.svg" alt="Map of all locations where BEST is present">
+                </div>
+            </div>
+        </section>
+
+        <section id="best-porto" class="js-background-parallax">
+            <div class="empty"></div>
+
+            <div class="content">
+                <h1>BEST Porto</h1>
+                <p>
+                    BEST Porto, a Local BEST Group, is present in the Faculties of 
+                    Science (FCUP) and Engineering (FEUP) of the University of 
+                    Porto, being headquartered in the latter. It was founded in 1996 
+                    and has been growing ever since, becoming a dynamic academic 
+                    group with enormous potential for student development.
+                </p>
+                <p>
+                    Currently, BEST Porto has about 60 members and organizes several 
+                    events every year. Our Local Group shares the same vision as 
+                    BEST Internacional, Enpowered Diversity, and believes in 
+                    personal and professional growth, through contact with that 
+                    diversity.
+                </p>
+            </div>
+        </section>
+
+        <section id="teams">
+            <h1>
+                <img class="info" src="icons/teams.svg" alt="Icon representing hexagons"> 
+                Teams
+            </h1>
+
+            <div class="all-team-icons">
+                <div>
+                    <div class="team-icon">
+                        <img src="icons/c_a team.svg" alt="Icon of a lightbulb with cogwheels inside">
+                    </div>
+                    <div class="team-name">
+                        <p>Competitions & Academic</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="team-icon">
+                        <img src="icons/it team.svg" alt="Icon of a website">
+                    </div>
+                    <div class="team-name">
+                        <p>IT</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="team-icon">
+                        <img src="icons/mkt team.svg" alt="Icon of a loudspeaker">
+                    </div>
+                    <div class="team-name">
+                        <p>Marketing</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="team-icon">
+                        <img src="icons/hr team.svg" alt="Icon of human connections">
+                    </div>
+                    <div class="team-name">
+                        <p>Human Resources</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="team-icon">
+                        <img src="icons/cr team.svg" alt="Icon of money surrounded by people">
+                    </div>
+                    <div class="team-name">
+                        <p>Corporate Relations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="meet-our-members-title">
+            <h1>
+                <img class="info" src="icons/members.svg" alt="Icon representing people">
+                Meet our members
+            </h1>
+
+        </section>
+        <section id="meet-our-members">
+            <h2>The XXVI Board of BEST Porto</h2>
+            <div class="member-images">
+                <div id="member-1" class="member">
+                    <div class="member-name">
+                        <p>Manuel Almeida</p>
+                        <p>Vice-President for External Services</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/manuel-ant%C3%B3nio-almeida-073660199/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="member-2" class="member">
+                    <div class="member-name">
+                        <p>Clara Moreira</p>
+                        <p>Treasurer</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/claramoreiragadelho/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="member-3" class="member">
+                    <div class="member-name">
+                        <p>Sofia Ferreira Leite</p>
+                        <p>President</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/sofia-ferreira-leite/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="member-4" class="member">
+                    <div class="member-name">
+                        <p>Francisco Ribeiro</p>
+                        <p>Secretary</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/francisco-ribeiro-8841a41ba/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="member-5" class="member">
+                    <div class="member-name">
+                        <p>João Carvalhal</p>
+                        <p>Vice-President for Human Resources</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/jo%C3%A3o-carvalhal-b357b91aa/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>The Management</h2>
+            <div class="member-images">
+                <div id="member-6" class="member">
+                    <div class="member-name">
+                        <p>Francisca Almeida</p>
+                        <p>Corporate Relations Coordinator</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/francisca-almeida/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="member-7" class="member">
+                    <div class="member-name">
+                        <p>Diogo Filipe Ventura</p>
+                        <p>Marketing Coordinator</p>
+                        <div>
+                            <a href="https://www.linkedin.com/company/best-porto/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="member-8" class="member">
+                    <div class="member-name">
+                        <p>José Duarte</p>
+                        <p>Competitions & Academic Coordinator</p>
+                        <div>
+                            <a href="https://www.linkedin.com/company/best-porto/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                        </div>
+                    </div class="member-name">
+                </div>
+                <div id="member-9" class="member">
+                    <div class="member-name">
+                        <p>David Marques</p>
+                        <p>IT Coordinator</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/david-marques-830b22205/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competitions">
+            <h1>
+                <img class="info" src="icons/competitions.svg" alt="Icon representing a cup">
+                Competitions
+            </h1>
+            <div class="first-part">
+                <div class="content">
+                    <p>
+                        Engineering Competitions are events where teams of
+                        students use their technical, social and communication 
+                        skills to fulfill a specific task or case. In these 
+                        competitions teams of students compete to 
+                        provide the most optimised solution in terms of 
+                        performance, cost and innovation under specific 
+                        conditions (time, situation, materials, etc).
+                        These criteria differ depending on the competition 
+                        category, such as:
+                    </p>
+                    <ul>
+                        <li>TEAM DESIGN</li>
+                        <li>DEBATES</li>
+                        <li>CASE STUDY</li>
+                        <li>NEGOTIATION</li>
+                    </ul>
+                </div>
+                <div class="image-right">
+                    <img src="img/competitions-1-escalada.jpg" alt="Image with a man showing tools to an audience">
+                </div>
+            </div>
+            
+
+            <div class="second-part">
+                <div class="image-left">
+                    <img src="img/competitions-2-escalada.jpg" alt="Image with four people discussing ideas">
+                </div>
+                <div class="content">
+                    <p>
+                        The key factors at play to successfully face these
+                        challenges are creativity, adaptation and imagination!
+                        Challenge your engineering skills through:
+                    </p>
+                    <ul>
+                        <li>
+                            Local Engineering Competitions;
+                        </li>
+                        <li>
+                            Local Rounds of
+                            <abbr title="European Best Engineering Competition">EBEC</abbr>;
+                        </li>
+                        <li>
+                            National and Regional Rounds of
+                            <abbr title="European Best Engineering Competition">EBEC</abbr>;
+                        </li>
+                        <li>
+                            Final Round of <abbr title="European Best Engineering Competition">EBEC</abbr>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="educational-involvement">
+            <h1>
+                <img class="info" src="icons/educational inv.svg" alt="Icon representing a mortarboard hat">
+                Educational Involvement
+            </h1>
+            <h2>
+                Developing students is our mission, so what better way is 
+                there to achieve this than to try to improve education?
+            </h2>
+
+            <ul>
+                <li>
+                    Through the Educational Involvement Department, BEST 
+                    strives to listen to the students' ideas on what can 
+                    be changed in their universities, study programmes or 
+                    curricula. BEST is eager to be in close collaboration 
+                    with the stakeholders of higher education, letting 
+                    them know about innovative solutions, coming from the 
+                    main receivers of education: students.
+                </li>
+                <li>
+                    To gather the students' opinions, BEST organises BEST 
+                    Symposia on Education (BSE), conducts surveys, and 
+                    interacts with local students by means of the LBGs. 
+                    The outcomes of the discussions are gathered 
+                    afterwards and later presented at international 
+                    conferences on education, in the form of scientific papers.
+                </li>
+                <li>
+                    In parallel, Local BEST Groups organise Local Events 
+                    on Education (LEoEs) where students have the 
+                    opportunity to  discuss topics concerning their own 
+                    university, educational  system or other local topics.
+                </li>
+            </ul>
+            
+        </section>
+        <section id="educational-involvement-statement">
+            <p>
+                We strive to stay up-to-date in this field, attending 
+                several international conferences per year, getting to 
+                know the state-of-the-art topics, and taking the 
+                opportunity to network with relevant higher educational 
+                institutions and individuals.
+            </p>
+        </section>
+
+        <section id="best-courses">
+            <h1>BEST Courses</h1>
+            <div class="first-part">
+                <div class="content">
+                    <p>
+                        Throughout the whole year BEST organises 
+                        different activities where students of technology 
+                        from member universities get the chance to:
+                    </p>
+                    <ul>
+                        <li>
+                            Complement your knowledge in different fields of study
+                        </li>
+                        <li>
+                            Visit companies, industrial plants and research centres
+                        </li>
+                        <li>
+                            Take part in case studies
+                        </li>
+                        <li>
+                            Follow interesting classes covering many different 
+                            technology fields, economics, marketing and 
+                            management
+                        </li>
+                        <li>
+                            Receive ECTS credits in recognised courses
+                        </li>
+                    </ul>
+                    <p>
+                        In these events, participants attend lectures given by 
+                        the university's teaching staff or by experts from 
+                        companies. At the end of the course students take an 
+                        exam, which is designed to evaluate the participants' 
+                        success.
+                    </p>
+                </div>
+                <div class="image-right">
+                    <img src="img/bestcourses-2-escalada.jpg" alt="Group of people in a park talking">
+                    <img src="img/bestcourses-3-escalada.jpg" alt="People in a classroom hearing a lecture">
+                </div>
+            </div>
+            
+
+            <div class="second-part">
+                <div class="image-left">
+                    <img src="img/bestcourses-4-escalada.jpg" alt="People looking at Avenida dos Aliados">
+                    <img src="img/bestcourses-5-escalada.jpg" alt="People learning how to surf">
+                </div>
+                <div class="content">
+                    <h2>Types of BEST Courses</h2>
+                    <p>
+                        A BEST Course is optimised to provide new knowledge or skills for participants, taught by professionals. There are many subtypes of BEST Courses:
+                    </p>
+                    <p>
+                        <strong>BEST Courses on Technology</strong> aim to 
+                        increase and widen the professional knowledge of the 
+                        participant in a certain field of technology or
+                        modern technological tool.
+                    </p>
+                    <p>
+                        <strong>BEST Courses on Career Related Skills</strong> contain non-technological subjects that develop personal skills in topics linked with work methods, communication techniques, marketing, economics, project and organisation management and other such soft skills, stressing practical work.
+                    </p>
+                    <p>
+                        <strong>BEST Courses on Applied Engineering</strong> help participants put theoretical 
+                        knowledge into practice. They work in different 
+                        teams and solve specific time-bounded tasks, with 
+                        limited resources, presenting their solutions at 
+                        the end.
+                    </p>
+                    <p>
+                        You can find list of BEST Courses to apply in the <a href="https://best.eu.org/courses/list.jsp" rel="external">list of courses</a> page.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="local-events">
+            <h1>
+                <img class="info" src="icons/local events.svg" alt="Icon representing a calendar with a checkmark on it">
+                Local Events
+            </h1>
+            <div class="carousel" aria-label="Pictures of the Events">
+                <ul>
+                    <li class="carousel-item item-visible">
+                        <img src="img/careercraft-escalada.jpg" alt="Classroom">
+                        <div class="event-text">
+                            <img class="career-craft" src="icons/career craft.png" alt="SciTeCh logo">
+                            <p>
+                                CareerCraft is a career suport event that
+                                focuses on helping students improve their
+                                technical skills through sessions
+                                and workshops. Its aim is to give
+                                students a global vision of what to expect from
+                                their future job.
+                            </p>
+                            <a href="https://www.instagram.com/tv/CVoGWvXINk1/?utm_source=ig_web_copy_link" target="_blank">Read More</a>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="img/ebec-escalada.jpg" alt="EBEC Prototype">
+                        <div class="event-text">
+                            <img src="icons/ebec.png" alt="EBEC logo">
+                            <p>
+                                <abbr title="European Best Engineering Competition">EBEC</abbr>
+                                Porto is an Engineering competition with
+                                two categories: Team Design and Case Study. The
+                                participants are tasked to solve the challanges
+                                proposed to them in an innovative and low cost manner.
+                            </p>
+                            <a href="https://ebec.bestporto.org/" target="_blank">Read More</a>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="img/scitech-escalada.jpg" alt="SciTech Participants and Organizers">
+                        <div class="event-text">
+                            <img src="icons/scitech.png" alt="SciTeCh logo">
+                            <p>
+                                SciTeCh is a team-based competition on 3
+                                categories - Team Design, Case Study and
+                                Debates. Teams are composed of 4 students from
+                                technology fields. The tasks they're solving
+                                are provided by BEST and partner companies.
+                            </p>
+                            <a href="https://scitech.bestporto.org/#about" target="_blank">Read More</a>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="img/leoe-escalada.jpg" alt="Local Event on Education Session">
+                        <div class="event-text">
+                            <img src="icons/leoe.png" alt="LEOE logo">
+                            <p>
+                                LEoE (Local Event on Education) aims to help
+                                faculty members, students and other 
+                                institutions better communicate with each
+                                other, in order to develop new ideas and
+                                initiatives to improve the education system.
+                            </p>
+                            <a href="https://www.instagram.com/p/CN-nW0Mqevd/?utm_source=ig_web_copy_link" target="_blank">Read More</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="carousel-buttons">
+                    <button id="carouselButton--prev" aria-label="Previous image">&lsaquo;</button>
+                    <button id="carouselButton--next" aria-label="Next image">&rsaquo;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <div class="footer-cover"></div>
+        <div class="follow">
+            <h1>Follow us!</h1>
+            <div class="socials">
+                <div>
+                    <a href="https://www.facebook.com/bestporto" target="_blank" rel="external"><img src="icons/facebook.png" alt="Facebook icon"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/bestporto/" target="_blank" rel="external"><img src="icons/instagram.png" alt="Instagram icon"></a>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/company/best-porto/" target="_blank" rel="external"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/user/BESTporto" target="_blank" rel="external"><img src="icons/youtube.png" alt="YouTube icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="contacts">
+            <address>
+                <p>
+                    <strong>Local Group BEST Porto</strong> <br>
+                    Faculdade de Engenharia da Universidade do Porto <br>
+                    Rua Dr. Roberto Frias, s/n <br>
+                    Room B321
+                </p>
+                
+                <p>
+                    <strong>Contact us:</strong> <br>
+                    <a href="mailto:geral@bestporto.org">geral@bestporto.org</a>
+                </p>
+            </address>
+        </div>
+        <div class="page-end">
+            <p>BEST PORTO</p>
+        </div>
+    </footer>
+</body>
+</html>
