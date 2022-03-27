@@ -1123,6 +1123,9 @@ First part decorative line, I can't make it WORK
         z-index: 2;
         pointer-events: none;
     }
+    #local-events div.carousel li:last-child div.event-text{
+        padding: 0px 14px 0px 6px;
+    }
 }
 
 
