@@ -779,6 +779,7 @@ header div.find-out-more a {
 #competitions div.content {
     flex: 1 1 45%;
     margin-top: 20px;
+    padding: 0px 10px 0px;
 }
 #competitions div.image-right {
     flex: 1.2 1 45%;
@@ -899,31 +900,25 @@ First part decorative line, I can't make it WORK
     font-weight: bold;
     text-align: center;
     width: 75%;
-    margin: 40px auto 20px;
+    margin: 40px auto 40px;
 }
 
 #educational-involvement ul {
     list-style-image: url(icons/circ-azul.png);
     list-style-position: inside;
 }
-#educational-involvement ul::before {
-    display: block;
-    position: relative;
-    top: -30px;
-    left: 75%;
-    width: calc(35% + var(--section-side-pad));
-    height: var(--width-lines);
-    content: '';
-    background: white;
-    border-radius: var(--width-lines);
-}
 
 #educational-involvement ul li {
     position: relative;
     left: -40px;
-    width: 110%;
     margin: 10px 0px;
     text-indent: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+    #educational-involvement ul li {
+        width: 105%;
+    }
 }
 
 #educational-involvement-statement {
