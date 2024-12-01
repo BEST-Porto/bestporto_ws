@@ -317,7 +317,7 @@ header {
     width: 100%;
     height: clamp(600px, 1280px, 100vh);
     margin: 0px;
-    background-image: url(img/inicio.jpg);
+    background-image: url(img/imagem_fundo_principal.JPG);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -474,7 +474,7 @@ header div.find-out-more a {
     display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-image: url(img/inicio.jpg);
+    background-image: url(img/imagem_fundo_principal.JPG);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -713,38 +713,40 @@ header div.find-out-more a {
     background-position: center;
 }
 #meet-our-members #member-1 {
-    background-image: url('img/members/board-external.png');
+    background-image: url('img/members/board-vpservices.JPG');
     background-position-y: -20px;
 }
 #meet-our-members #member-2 {
-    background-image: url('img/members/board-treasurer.png');
+    background-image: url('img/members/board-vphr.JPG');
     background-position-y: -5px;
 }
 #meet-our-members #member-3 {
-    background-image: url('img/members/board-presi.png');
+    background-image: url('img/members/board-president.JPG');
     background-position-y: 0px;
     background-repeat: no-repeat;
 }
 #meet-our-members #member-4 {
-    background-image: url('img/members/board-secretary.png');
+    background-image: url('img/members/board-secretary2.png');
 }
 #meet-our-members #member-5 {
-    background-image: url('img/members/board-hr.png');
+    background-image: url('img/members/board-treasurer.JPG');
     background-position-y: 0px;
 }
 #meet-our-members #member-6 {
-    background-image: url('img/members/management-cr.jpg');
+    background-image: url('img/members/management-cr.JPG');
 }
 #meet-our-members #member-7 {
-    background-image: url('img/members/management-mkt.jpg');
+    background-image: url('img/members/management-\ design2.png');
 }
 #meet-our-members #member-8 {
-    background-image: url('img/members/management-comp.jpg');
+    background-image: url('img/members/management-ca.JPG');
 }
 #meet-our-members #member-9 {
-    background-image: url('img/members/management-it.jpg');
+    background-image: url('img/members/management-pr.JPG');
 }
-
+#meet-our-members #member-10 {
+    background-image: url('img/members/management-it.JPG');
+}
 
 /* 'Competitions' section */
 #competitions h1 {
