@@ -71,8 +71,8 @@ window.addEventListener('scroll', checkNavbar)
 const animationDuration = 2000          // Duration of the animation in ms
 const animationSteps = 250               // Number of steps in the animation
 const animationTargets = [
-    [document.getElementById('num-countries'), 32],
-    [document.getElementById('num-groups'), 87],
+    [document.getElementById('num-countries'), 30],
+    [document.getElementById('num-groups'), 84],
     [document.getElementById('num-students'), 3300]
 ]
 
