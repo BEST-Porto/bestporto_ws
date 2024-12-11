@@ -96,7 +96,7 @@ function isInViewport(element) {
 const numberBoxes = document.getElementById('number-boxes')
 
 let animated = false
-function animateNumbers() {
+/*function animateNumbers() {
 
     // If the animation has been done, return
     if (animated) return
@@ -127,7 +127,7 @@ function animateNumbers() {
 
         updateNumber()
     })
-}
+} */
 
 window.addEventListener('scroll', animateNumbers)
 
