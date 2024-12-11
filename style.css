@@ -732,6 +732,9 @@ header div.find-out-more a {
     background-image: url('img/members/board-treasurer.JPG');
     background-position-y: 0px;
 }
+#meet-our-members #member-6 {
+    background-image: url('img/members/management-cr.JPG');
+}
 #meet-our-members #member-7 {
     background-image: url('img/members/management-\ design2.png');
 }
