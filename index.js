@@ -68,12 +68,12 @@ window.addEventListener('scroll', checkNavbar)
 
 
 // Animate numbers going up
-const animationDuration = 2000          // Duration of the animation in ms
-const animationSteps = 250               // Number of steps in the animation
+const animationDuration = 3000          // Duration of the animation in ms
+const animationSteps = 300               // Number of steps in the animation
 const animationTargets = [
-    [document.getElementById('num-countries'), 30],
-    [document.getElementById('num-groups'), 84],
-    [document.getElementById('num-students'), 3300]
+    [document.getElementById('num-countries'), 60],
+    [document.getElementById('num-groups'), 8478],
+    [document.getElementById('num-students'), 33006]
 ]
 
 // This is the easing function: https://easings.net/#easeOutQuint
