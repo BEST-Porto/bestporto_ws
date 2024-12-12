@@ -67,14 +67,6 @@ checkNavbar()
 window.addEventListener('scroll', checkNavbar)
 
 
-// Animate numbers going up
-const animationDuration = 3000          // Duration of the animation in ms
-const animationSteps = 300               // Number of steps in the animation
-const animationTargets = [
-    [document.getElementById('num-countries'), 60],
-    [document.getElementById('num-groups'), 8478],
-    [document.getElementById('num-students'), 33006]
-]
 
 // This is the easing function: https://easings.net/#easeOutQuint
 function easingFunction(t) {
@@ -94,43 +86,6 @@ function isInViewport(element) {
 
 // Do the animation
 const numberBoxes = document.getElementById('number-boxes')
-
-let animated = false
-/*function animateNumbers() {
-
-    // If the animation has been done, return
-    if (animated) return
-
-    // If the object is not visible, return
-    let visible = isInViewport(numberBoxes)
-    if (!visible) return
-
-    animated = true
-    
-    let delay = animationDuration / animationSteps
-
-    animationTargets.forEach((thisCounter, index) => {
-        const updateNumber = (currentStep = 0) => {
-            let htmlObject = thisCounter[0]
-            let numTarget = thisCounter[1]
-
-            if (currentStep < animationSteps) {
-                let time = currentStep / animationSteps
-    
-                htmlObject.innerText = Math.ceil(easingFunction(time) * numTarget)
-    
-                window.setTimeout(updateNumber, delay, currentStep + 1)
-            } else {
-                htmlObject.innerText = numTarget
-            }
-        }
-
-        updateNumber()
-    })
-} */
-
-window.addEventListener('scroll', animateNumbers)
-
 
 // Carousel
 let itemIndex = 0
