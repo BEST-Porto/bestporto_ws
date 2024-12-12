@@ -27,7 +27,6 @@ if (safariAgent) {
     })
 }
 
-
 // Dropdown menu for small screens
 let navbarDropdown
 function dropdown(delay=0, onlyOff=false) {
