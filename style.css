@@ -583,9 +583,6 @@ header div.find-out-more a {
     color: black;
 }
 
-
-
-
 /* 'Meet our members' section */
 #meet-our-members-title h1 {
     text-align: center;
@@ -618,7 +615,6 @@ header div.find-out-more a {
     margin-top: 50px;
 }
 
-
 #meet-our-members {
     padding-top: 10px;
     background-color: white;
@@ -635,22 +631,25 @@ header div.find-out-more a {
 #meet-our-members div.member-images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: auto;
+    justify-content: space-around; /* Ensure spacing is distributed */
+    max-width: 100%;
 }
+
 #meet-our-members div.member-images:last-child {
-    width: 80%;
+    width: 100%; /* Full width to avoid shrinking */
 }
 
 #meet-our-members div.member-images div.member {
-    position: relative;
-    max-width: 180px;
-    width: 180px;
-    min-width: 180px;
+    flex: 0 1 calc(20% - 20px); /* 20% width minus margins */
+    margin: 10px; /* Adds space around members */
+    box-sizing: border-box; /* Ensure borders are included in width */
+    max-width: 180px; /* Optional: Maintain consistent size */
     height: 200px;
-    margin: 10px;
+    position: relative;
     border: var(--dark-blue) 4px solid;
     overflow-y: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Colors for the members' borders */
@@ -660,7 +659,6 @@ header div.find-out-more a {
 #meet-our-members div.member-images:nth-child(2) div.member {
     border-color: var(--green);
 }
-
 
 #meet-our-members div.member-images div.member-name {
     display: flex;
@@ -708,10 +706,6 @@ header div.find-out-more a {
 }
 
 /* Members' images */
-#meet-our-members div.member {
-    background-size: cover;
-    background-position: center;
-}
 #meet-our-members #member-1 {
     background-image: url('img/members/board-vpservices-scaled.jpg');
     background-position-y: -20px;
@@ -747,6 +741,21 @@ header div.find-out-more a {
 #meet-our-members #member-10 {
     background-image: url('img/members/management-it.png');
 }
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    #meet-our-members div.member-images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #meet-our-members div.member {
+        flex: 0 1 calc(45% - 20px); /* Two members per row on smaller screens */
+        min-width: 150px; /* Ensure it doesn't get too small */
+    }
+}
+
+
+
 
 /* 'Competitions' section */
 #competitions h1 {
