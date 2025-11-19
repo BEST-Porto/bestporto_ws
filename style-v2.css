@@ -707,39 +707,39 @@ header div.find-out-more a {
 
 /* Members' images */
 #meet-our-members #member-1 {
-    background-image: url('img/members/board-vpservices-scaled.jpg');
+    background-image: url('img/members/Pedro.jpeg');
     background-position-y: -20px;
 }
 #meet-our-members #member-2 {
-    background-image: url('img/members/board-vphr.JPG');
+    background-image: url('img/members/Gomes.jpeg');
     background-position-y: -5px;
 }
 #meet-our-members #member-3 {
-    background-image: url('img/members/board-president.JPG');
+    background-image: url('img/members/Diogo.jpeg');
     background-position-y: 0px;
     background-repeat: no-repeat;
 }
 #meet-our-members #member-4 {
-    background-image: url('img/members/board-secretary2.png');
+    background-image: url('img/members/Prata.jpeg');
 }
 #meet-our-members #member-5 {
-    background-image: url('img/members/board-treasurer.JPG');
+    background-image: url('img/members/Maggy.jpeg');
     background-position-y: 0px;
 }
 #meet-our-members #member-6 {
-    background-image: url('img/members/management-cr.png');
+    background-image: url('img/members/Fardilha.jpeg');
 }
 #meet-our-members #member-7 {
-    background-image: url('img/members/management-\ design2.png');
+    background-image: url('img/members/Marta.jpeg');
 }
 #meet-our-members #member-8 {
-    background-image: url('img/members/management-ca.JPG');
+    background-image: url('img/members/Sílvia.jpeg');
 }
 #meet-our-members #member-9 {
-    background-image: url('img/members/management-pr.JPG');
+    background-image: url('img/members/Sara.jpeg');
 }
 #meet-our-members #member-10 {
-    background-image: url('img/members/management-it.png');
+    background-image: url('img/members/Balsâmico.jpeg');
 }
 
 /* Responsive adjustments */
