@@ -588,6 +588,7 @@ header div.find-out-more a {
     text-align: center;
     margin-top: 30px;
 }
+/*
 #meet-our-members-title h1::after {
     display: block;
     position: relative;
@@ -599,6 +600,7 @@ header div.find-out-more a {
     background: white;
     border-radius: var(--width-lines);
 }
+    */
 #meet-our-members-title h1 img {
     position: relative;
     top: 10px;
@@ -739,7 +741,7 @@ header div.find-out-more a {
     background-image: url('img/members/Sara.jpeg');
 }
 #meet-our-members #member-10 {
-    background-image: url('img/members/Balsâmico.jpeg');
+    background-image: url('img/members/Balsamico.jpeg');
 }
 
 /* Responsive adjustments */
