@@ -743,6 +743,30 @@ header div.find-out-more a {
 #meet-our-members #member-10 {
     background-image: url('img/members/Balsamico.jpeg');
 }
+#meet-our-members #member-11 {
+    background-image: url('img/members/Leonor.jpeg');
+    background-position-y: -20px;
+}
+#meet-our-members #member-12 {
+    background-image: url('img/members/Carlota.jpeg');
+    background-position-y: -5px;
+}
+#meet-our-members #member-13 {
+    background-image: url('img/members/MaGui.jpeg');
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+#meet-our-members #member-14 {
+    background-image: url('img/members/Bessa.jpeg');
+}
+#meet-our-members #member-15 {
+    background-image: url('img/members/SaraAlves.jpeg');
+    background-position-y: 0px;
+}
+#meet-our-members #member-16 {
+    background-image: url('img/members/Lucas.jpeg');
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 800px) {
