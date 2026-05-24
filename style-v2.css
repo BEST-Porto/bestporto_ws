@@ -767,7 +767,6 @@ header div.find-out-more a {
     background-image: url('img/members/Lucas.jpeg');
 }
 
-
 /* Responsive adjustments */
 @media (max-width: 800px) {
     #meet-our-members div.member-images {
@@ -779,9 +778,6 @@ header div.find-out-more a {
         min-width: 150px; /* Ensure it doesn't get too small */
     }
 }
-
-
-
 
 /* 'Competitions' section */
 #competitions h1 {
