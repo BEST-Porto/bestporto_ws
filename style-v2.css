@@ -317,7 +317,7 @@ header {
     width: 100%;
     height: clamp(600px, 1280px, 100vh);
     margin: 0px;
-    background-image: url(img/imagem_fundo_principal.JPG);
+    background-image: url(img/imagem_fundo_principal.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -474,7 +474,7 @@ header div.find-out-more a {
     display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-image: url(img/imagem_fundo_principal.JPG);
+    background-image: url(img/imagem_fundo_principal.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
