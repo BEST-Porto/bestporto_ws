@@ -630,11 +630,25 @@ header div.find-out-more a {
     margin-top: 50px;
 }
 
+#meet-our-members div.board-group-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+#meet-our-members section.board-group {
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+    flex: 1 1 300px;
+}
 #meet-our-members div.member-images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Ensure spacing is distributed */
+    justify-content: center;
     max-width: 100%;
+    gap: 5px;
 }
 
 #meet-our-members div.member-images:last-child {
@@ -642,8 +656,7 @@ header div.find-out-more a {
 }
 
 #meet-our-members div.member-images div.member {
-    flex: 0 1 calc(20% - 20px); /* 20% width minus margins */
-    margin: 10px; /* Adds space around members */
+    flex: 0 1 calc(20% - 5px); /* 20% width minus margins */
     box-sizing: border-box; /* Ensure borders are included in width */
     max-width: 180px; /* Optional: Maintain consistent size */
     height: 200px;
@@ -652,6 +665,11 @@ header div.find-out-more a {
     overflow-y: hidden;
     background-size: cover;
     background-position: center;
+}
+
+#meet-our-members section.board-group div.member-images div.member {
+    flex: 0 1 180px; /* Fixed size so these match the coordinators' photos */
+    border-color: #144173;
 }
 
 /* Colors for the members' borders */
@@ -752,7 +770,7 @@ header div.find-out-more a {
     background-position-y: -5px;
 }
 #meet-our-members #member-13 {
-    background-image: url('img/members/MaGui.jpeg');
+    background-image: url('img/members/MaGui.jpg');
     background-position-y: 0px;
     background-repeat: no-repeat;
 }
@@ -760,7 +778,7 @@ header div.find-out-more a {
     background-image: url('img/members/Bessa.jpeg');
 }
 #meet-our-members #member-15 {
-    background-image: url('img/members/SaraAlves.jpeg');
+    background-image: url('img/members/SaraAlves.jpg');
     background-position-y: 0px;
 }
 #meet-our-members #member-16 {
