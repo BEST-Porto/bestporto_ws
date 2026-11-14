@@ -392,6 +392,8 @@ header div.find-out-more a {
 }
 
 #who-we-are div.text {
+    position: relative;
+    z-index: 1;
     width: 75%;
     margin: 20px;
 }
@@ -669,7 +671,7 @@ header div.find-out-more a {
 
 #meet-our-members section.board-group div.member-images div.member {
     flex: 0 1 180px; /* Fixed size so these match the coordinators' photos */
-    border-color: #144173;
+    border-color: rgb(103, 187, 103);
 }
 
 /* Colors for the members' borders */
@@ -677,7 +679,7 @@ header div.find-out-more a {
     border-color: var(--orange);
 }
 #meet-our-members div.member-images:nth-child(2) div.member {
-    border-color: var(--green);
+    border-color: var(--dark-blue);
 }
 
 #meet-our-members div.member-images div.member-name {
@@ -719,6 +721,9 @@ header div.find-out-more a {
 }
 #meet-our-members div.member-images div.member-name p:nth-child(2) {
     font-size: 0.55em;
+    line-height: 1.1;
+    padding: 0 4px;
+    box-sizing: border-box;
 }
 
 #meet-our-members div.member-images div.member:hover div.member-name {
@@ -727,62 +732,62 @@ header div.find-out-more a {
 
 /* Members' images */
 #meet-our-members #member-1 {
-    background-image: url('img/members/Pedro.jpeg');
+    background-image: url('img/members/misan.jpg');
     background-position-y: -20px;
 }
 #meet-our-members #member-2 {
-    background-image: url('img/members/Gomes.jpeg');
+    background-image: url('img/members/albasini.jpg');
     background-position-y: -5px;
 }
 #meet-our-members #member-3 {
-    background-image: url('img/members/Diogo.jpeg');
+    background-image: url('img/members/saraS.jpg');
     background-position-y: 0px;
     background-repeat: no-repeat;
 }
 #meet-our-members #member-4 {
-    background-image: url('img/members/Prata.jpeg');
+    background-image: url('img/members/marta.jpg');
 }
 #meet-our-members #member-5 {
-    background-image: url('img/members/Maggy.jpeg');
+    background-image: url('img/members/fardilha.jpg');
     background-position-y: 0px;
 }
 #meet-our-members #member-6 {
-    background-image: url('img/members/Fardilha.jpeg');
+    background-image: url('img/members/stefani.jpg');
 }
 #meet-our-members #member-7 {
-    background-image: url('img/members/Marta.jpeg');
+    background-image: url('img/members/sara.jpg');
 }
 #meet-our-members #member-8 {
-    background-image: url('img/members/Sílvia.jpeg');
+    background-image: url('img/members/pinheiro.jpg');
 }
 #meet-our-members #member-9 {
-    background-image: url('img/members/Sara.jpeg');
+    background-image: url('img/members/nuno.jpg');
 }
 #meet-our-members #member-10 {
-    background-image: url('img/members/Balsamico.jpeg');
+    background-image: url('img/members/bruna.jpg');
 }
 #meet-our-members #member-11 {
-    background-image: url('img/members/Leonor.jpeg');
+    background-image: url('img/members/prata.jpg');
     background-position-y: -20px;
 }
 #meet-our-members #member-12 {
-    background-image: url('img/members/Carlota.jpg');
+    background-image: url('img/members/gomes.jpg');
     background-position-y: -5px;
 }
 #meet-our-members #member-13 {
-    background-image: url('img/members/MaGui.jpg');
+    background-image: url('img/members/saraG.jpg');
     background-position-y: 0px;
     background-repeat: no-repeat;
 }
 #meet-our-members #member-14 {
-    background-image: url('img/members/Bessa.jpeg');
+    background-image: url('img/members/mariana.jpg');
 }
 #meet-our-members #member-15 {
-    background-image: url('img/members/SaraAlves.jpg');
+    background-image: url('img/members/manta.jpg');
     background-position-y: 0px;
 }
 #meet-our-members #member-16 {
-    background-image: url('img/members/Lucas.jpeg');
+    background-image: url('img/members/sofia.jpg');
 }
 
 /* Responsive adjustments */
